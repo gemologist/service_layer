@@ -2,3 +2,5 @@
 /.ruby-gemset
 
 /Gemfile.lock
+
+/.rspec-status

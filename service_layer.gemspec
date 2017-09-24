@@ -25,4 +25,6 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*']
 
   spec.required_ruby_version = '>= 2.2.8'
+
+  spec.add_development_dependency 'rspec', '~> 3.6'
 end
