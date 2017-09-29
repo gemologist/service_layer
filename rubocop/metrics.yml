@@ -1,0 +1,55 @@
+# Override
+Metrics/AbcSize:
+  Enabled: true
+  Max: 10
+
+# Override
+Metrics/BlockLength:
+  Enabled: false
+
+# Override
+Metrics/BlockNesting:
+  Enabled: true
+  CountBlocks: false
+  Max: 2
+
+Metrics/ClassLength:
+  Enabled: true
+  CountComments: false
+  Max: 100
+
+# Override
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 5
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 80
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  IgnoreCopDirectives: false
+  IgnoredPatterns: []
+
+# Override
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: false
+  Max: 15
+
+Metrics/ModuleLength:
+  Enabled: true
+  CountComments: false
+  Max: 100
+
+Metrics/ParameterLists:
+  Enabled: true
+  Max: 5
+  CountKeywordArgs: true
+
+# Override
+Metrics/PerceivedComplexity:
+  Enabled: false
