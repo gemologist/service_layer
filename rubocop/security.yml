@@ -1,0 +1,12 @@
+Security/Eval:
+  Enabled: true
+
+Security/JSONLoad:
+  Enabled: true
+  AutoCorrect: false
+
+Security/MarshalLoad:
+  Enabled: true
+
+Security/YAMLLoad:
+  Enabled: true

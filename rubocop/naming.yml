@@ -1,0 +1,118 @@
+Naming/AccessorMethodName:
+  Enabled: true
+
+Naming/AsciiIdentifiers:
+  Enabled: true
+
+Naming/BinaryOperatorParameterName:
+  Enabled: true
+
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+
+Naming/ConstantName:
+  Enabled: true
+
+# Override
+Naming/FileName:
+  Enabled: true
+  Exclude: [spec/**/*]
+  ExpectMatchingDefinition: true
+  Regex: ~
+  IgnoreExecutableScripts: false
+  AllowedAcronyms:
+    - CLI
+    - DSL
+    - ACL
+    - API
+    - ASCII
+    - CPU
+    - CSS
+    - DNS
+    - EOF
+    - GUID
+    - HTML
+    - HTTP
+    - HTTPS
+    - ID
+    - IP
+    - JSON
+    - LHS
+    - QPS
+    - RAM
+    - RHS
+    - RPC
+    - SLA
+    - SMTP
+    - SQL
+    - SSH
+    - TCP
+    - TLS
+    - TTL
+    - UDP
+    - UI
+    - UID
+    - UUID
+    - URI
+    - URL
+    - UTF8
+    - VM
+    - XML
+    - XMPP
+    - XSRF
+    - XSS
+
+Naming/HeredocDelimiterCase:
+  Enabled: true
+  EnforcedStyle: uppercase
+
+Naming/HeredocDelimiterNaming:
+  Enabled: true
+  Blacklist:
+    - !ruby/regexp '/(^|\s)(EO[A-Z]{1}|END)(\s|$)/'
+
+Naming/MethodName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# Override
+Naming/PredicateName:
+  Enabled: true
+  NamePrefix:
+    - at_
+    - by_
+    - can
+    - for_
+    - has_
+    - have_
+    - in_
+    - is_
+    - nb
+    - number
+    - numbers
+    - on_
+  NamePrefixBlacklist:
+    - at_
+    - by_
+    - can_
+    - for_
+    - has_
+    - have_
+    - in_
+    - is_
+    - nb
+    - number
+    - numbers
+    - on_
+  NameWhitelist: []
+  Exclude:
+    - 'spec/**/*'
+
+Naming/VariableName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# Override
+Naming/VariableNumber:
+  Enabled: true
+  EnforcedStyle: non_integer

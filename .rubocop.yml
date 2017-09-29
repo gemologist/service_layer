@@ -1,0 +1,12 @@
+AllCops:
+  DisabledByDefault: true
+  TargetRubyVersion: 2.2
+
+inherit_from:
+  - ./rubocop/layout.yml
+  - ./rubocop/lint.yml
+  - ./rubocop/metrics.yml
+  - ./rubocop/naming.yml
+  - ./rubocop/performance.yml
+  - ./rubocop/security.yml
+  - ./rubocop/style.yml
