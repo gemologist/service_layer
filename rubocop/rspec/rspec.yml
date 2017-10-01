@@ -1,0 +1,188 @@
+RSpec/AlignLeftLetBrace:
+  Enabled: false
+
+RSpec/AlignRightLetBrace:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: true
+
+RSpec/AroundBlock:
+  Enabled: true
+
+RSpec/BeEql:
+  Enabled: true
+
+RSpec/BeforeAfterAll:
+  Enabled: true
+  Exclude:
+    - spec/spec_helper.rb
+    - spec/rails_helper.rb
+    - spec/support/**/*.rb
+
+RSpec/DescribeClass:
+  Enabled: true
+
+RSpec/DescribeMethod:
+  Enabled: true
+
+RSpec/DescribeSymbol:
+  Enabled: true
+
+RSpec/DescribedClass:
+  SkipBlocks: false
+  Enabled: true
+  EnforcedStyle: described_class
+
+RSpec/EmptyExampleGroup:
+  Enabled: true
+  CustomIncludeMethods: []
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: true
+
+RSpec/EmptyLineAfterSubject:
+  Enabled: true
+
+# Override
+RSpec/ExampleLength:
+  Enabled: true
+  Max: 3
+
+# Override
+RSpec/ExampleWording:
+  Enabled: true
+  CustomTransform:
+    be: is
+    BE: IS
+    have: has
+    HAVE: HAS
+  IgnoredWords: []
+  AutoCorrect: false
+
+# Override
+RSpec/ExpectActual:
+  Enabled: true
+  Exclude: []
+
+RSpec/ExpectInHook:
+  Enabled: true
+
+RSpec/ExpectOutput:
+  Enabled: true
+
+# Override
+RSpec/FilePath:
+  Enabled: true
+  CustomTransform: []
+  IgnoreMethods: false
+
+RSpec/Focus:
+  Enabled: true
+
+RSpec/HookArgument:
+  Enabled: true
+  EnforcedStyle: implicit
+
+RSpec/ImplicitExpect:
+  Enabled: true
+  EnforcedStyle: is_expected
+
+RSpec/InstanceSpy:
+  Enabled: true
+
+RSpec/InstanceVariable:
+  Enabled: true
+  AssignmentOnly: false
+
+RSpec/InvalidPredicateMatcher:
+  Enabled: true
+
+RSpec/ItBehavesLike:
+  Enabled: true
+  EnforcedStyle: it_behaves_like
+
+RSpec/IteratedExpectation:
+  Enabled: true
+
+RSpec/LeadingSubject:
+  Enabled: true
+
+RSpec/LetBeforeExamples:
+  Enabled: true
+
+RSpec/LetSetup:
+  Enabled: true
+
+RSpec/MessageChain:
+  Enabled: true
+
+# Override
+RSpec/MessageExpectation:
+  Enabled: true
+  EnforcedStyle: allow
+
+RSpec/MessageSpies:
+  Enabled: true
+  EnforcedStyle: have_received
+
+RSpec/MultipleDescribes:
+  Enabled: true
+
+RSpec/MultipleExpectations:
+  Enabled: true
+  Max: 1
+
+RSpec/MultipleSubjects:
+  Enabled: true
+
+RSpec/NamedSubject:
+  Enabled: true
+
+RSpec/NestedGroups:
+  Enabled: true
+  Max: 3
+
+RSpec/NotToNot:
+  Enabled: true
+  EnforcedStyle: not_to
+
+RSpec/OverwritingSetup:
+  Enabled: true
+
+RSpec/PredicateMatcher:
+  Enabled: true
+  Strict: true
+  EnforcedStyle: inflected
+
+RSpec/RepeatedDescription:
+  Enabled: true
+
+RSpec/RepeatedExample:
+  Enabled: true
+
+RSpec/ReturnFromStub:
+  Enabled: true
+  EnforcedStyle: and_return
+
+RSpec/ScatteredLet:
+  Enabled: true
+
+RSpec/ScatteredSetup:
+  Enabled: true
+
+RSpec/SharedContext:
+  Enabled: true
+
+RSpec/SingleArgumentMessageChain:
+  Enabled: true
+
+RSpec/SubjectStub:
+  Enabled: true
+
+RSpec/VerifiedDoubles:
+  Enabled: true
+  IgnoreSymbolicNames: false
+
+RSpec/VoidExpect:
+  Enabled: true

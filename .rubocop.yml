@@ -1,3 +1,6 @@
+require:
+  - rubocop-rspec
+
 AllCops:
   DisabledByDefault: true
   TargetRubyVersion: 2.2
@@ -10,3 +13,4 @@ inherit_from:
   - ./rubocop/performance.yml
   - ./rubocop/security.yml
   - ./rubocop/style.yml
+  - ./rubocop/rspec/rspec.yml
