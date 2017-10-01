@@ -1,0 +1,68 @@
+# Override
+Metrics/AbcSize:
+  Enabled: true
+  Max: 10
+
+# Override
+Metrics/BlockLength:
+  Enabled: true
+  CountComments: false
+  Max: 3
+  ExcludedMethods:
+    - refine
+  Exclude:
+    - '**/*.gemspec'
+    - 'spec/**/*'
+
+# Override
+Metrics/BlockNesting:
+  Enabled: true
+  CountBlocks: true
+  Max: 2
+  Exclude:
+    - 'spec/**/*'
+
+# Override
+Metrics/ClassLength:
+  Enabled: true
+  CountComments: false
+  Max: 30
+
+# Override
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 3
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 80
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  IgnoreCopDirectives: false
+  IgnoredPatterns: []
+
+# Override
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: false
+  Max: 10
+
+# Override
+Metrics/ModuleLength:
+  Enabled: true
+  CountComments: false
+  Max: 30
+
+# Override
+Metrics/ParameterLists:
+  Enabled: true
+  Max: 2
+  CountKeywordArgs: false
+
+# Override
+# Depend on Metrics/CyclomaticComplexity
+Metrics/PerceivedComplexity:
+  Enabled: false
