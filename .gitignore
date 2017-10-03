@@ -4,3 +4,6 @@
 /Gemfile.lock
 
 /.rspec-status
+
+/.yardoc/
+/doc/

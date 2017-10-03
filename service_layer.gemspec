@@ -22,11 +22,14 @@ Gem::Specification.new do |spec|
   spec.metadata['homepage_uri']    = 'https://github.com/gemologist/service_layer'
   spec.metadata['source_code_uri'] = 'https://github.com/gemologist/service_layer'
 
-  spec.files = Dir['lib/**/*']
+  spec.files = Dir['lib/**/*', '.yardopts', 'README.md', 'CHANGELOG.md',
+                   'LICENSE']
 
   spec.required_ruby_version = '>= 2.2.8'
 
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'rubocop', '~> 0.50.0'
   spec.add_development_dependency 'rubocop-rspec', '~> 1.18'
+  spec.add_development_dependency 'yard', '~> 0.9.9'
+  spec.add_development_dependency 'yard-classmethods', '~> 1.0'
 end
