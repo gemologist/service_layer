@@ -5,3 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
+
+### Added
+
+* Provide a generic Response API. `Success` and `Error` wrap a value which is
+gettable with `#data` and decorate that value with the `#success?` predicate
+method. This makes it possible to know the state of success of an execution.
