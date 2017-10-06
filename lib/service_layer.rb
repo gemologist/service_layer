@@ -7,4 +7,6 @@ require 'service_layer/version'
 # Provides an easy way to write services object. They are used to encapsulate
 # application logic business.
 module ServiceLayer
+  autoload :Base, 'service_layer/base'
+  autoload :Response, 'service_layer/response'
 end
