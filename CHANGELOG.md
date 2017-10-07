@@ -11,3 +11,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Provide a generic Response API. `Success` and `Error` wrap a value which is
 gettable with `#data` and decorate that value with the `#success?` predicate
 method. This makes it possible to know the state of success of an execution.
+* Implement the Command design pattern. It imposes the implementation of a
+`#perform` method and provides a delegation of the execution logic of the
+command.
