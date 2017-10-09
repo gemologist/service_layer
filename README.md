@@ -21,6 +21,44 @@ Or install it yourself as:
 
     $ gem install service_layer
 
+## Usage
+
+```ruby
+class MatchingService < ApplicationService
+  attr_reader :tender
+
+  def initialize(tender:)
+    @tender = tender
+  end
+
+  def perform
+    # business logic
+    Success.new(data: matches_created)
+  rescue Geocoder::OverQueryLimitError => exception
+    Error.new(data: exception, message: exception.message)
+  end
+end
+```
+```ruby
+class TendersController < ApplicationController
+  def update
+    @tender = Tender.find(params[:id])
+    result = MatchingService.perform(tender: @tender)
+
+    respond_to do |format|
+      if result.success?
+        format.html { redirect_to tender_path(@tender), status: :see_other }
+      else
+        format.html do
+          flash.now[:message] = t(result.message)
+          render :edit
+        end
+      end
+    end
+  end
+end
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on [GitHub](https://github.com/adriensldy/service_layer).
