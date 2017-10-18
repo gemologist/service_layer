@@ -105,6 +105,9 @@ Naming/PredicateName:
     - numbers
     - on_
   NameWhitelist: []
+  MethodDefinitionMacros:
+    - define_method
+    - define_singleton_method
   Exclude:
     - 'spec/**/*'
 
