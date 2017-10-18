@@ -80,6 +80,11 @@ Style/CommandLiteral:
 Style/CommentAnnotation:
   Enabled: false
 
+# Override
+# Depend on Style/InlineComment
+Style/CommentedKeyword:
+  Enabled: false
+
 Style/ConditionalAssignment:
   Enabled: true
   EnforcedStyle: assign_to_condition
@@ -88,6 +93,9 @@ Style/ConditionalAssignment:
 
 Style/Copyright:
   Enabled: false
+
+Style/DateTime:
+  Enabled: true
 
 Style/DefWithParentheses:
   Enabled: true
@@ -252,6 +260,9 @@ Style/MissingElse:
 Style/MixinGrouping:
   Enabled: true
   EnforcedStyle: separated
+
+Style/MixinUsage:
+  Enabled: true
 
 # Override
 Style/ModuleFunction:
@@ -458,6 +469,9 @@ Style/SpecialGlobalVars:
 Style/StabbyLambdaParentheses:
   Enabled: true
   EnforcedStyle: require_parentheses
+
+Style/StderrPuts:
+  Enabled: true
 
 Style/StringLiterals:
   Enabled: true

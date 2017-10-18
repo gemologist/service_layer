@@ -6,6 +6,7 @@ AllCops:
   TargetRubyVersion: 2.2
 
 inherit_from:
+  - ./rubocop/gemspec.yml
   - ./rubocop/layout.yml
   - ./rubocop/lint.yml
   - ./rubocop/metrics.yml

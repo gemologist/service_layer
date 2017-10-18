@@ -103,10 +103,7 @@ Lint/InheritException:
 Lint/InterpolationCheck:
   Enabled: true
 
-Lint/InvalidCharacterLiteral:
-  Enabled: true
-
-Lint/LiteralInCondition:
+Lint/LiteralAsCondition:
   Enabled: true
 
 Lint/LiteralInInterpolation:
@@ -140,6 +137,12 @@ Lint/RandOne:
   Enabled: true
 
 Lint/RedundantWithIndex:
+  Enabled: true
+
+Lint/RedundantWithObject:
+  Enabled: true
+
+Lint/RegexpAsCondition:
   Enabled: true
 
 Lint/RequireParentheses:
@@ -181,6 +184,9 @@ Lint/UnifiedInteger:
   Enabled: true
 
 Lint/UnneededDisable:
+  Enabled: true
+
+Lint/UnneededRequireStatement:
   Enabled: true
 
 Lint/UnneededSplatExpansion:
