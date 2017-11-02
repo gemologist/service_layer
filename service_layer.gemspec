@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
                    'LICENSE']
 
   spec.required_ruby_version = '>= 2.2.8'
+  spec.required_rubygems_version = '>= 2.7.0'
 
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'rubocop', '~> 0.51.0'
