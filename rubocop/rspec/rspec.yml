@@ -20,6 +20,13 @@ RSpec/BeforeAfterAll:
     - spec/rails_helper.rb
     - spec/support/**/*.rb
 
+RSpec/ContextWording:
+  Enabled: true
+  Prefixes:
+    - when
+    - with
+    - without
+
 RSpec/DescribeClass:
   Enabled: true
 
