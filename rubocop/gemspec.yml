@@ -1,0 +1,5 @@
+Gemspec/OrderedDependencies:
+  Enabled: true
+  TreatCommentsAsGroupSeparators: true
+  Include:
+    - '**/*.gemspec'

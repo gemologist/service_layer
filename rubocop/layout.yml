@@ -260,6 +260,7 @@ Layout/SpaceInsideStringInterpolation:
 
 Layout/Tab:
   Enabled: true
+  IndentationWidth: ~
 
 Layout/TrailingBlankLines:
   Enabled: true
