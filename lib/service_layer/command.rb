@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'ostruct'
+
 module ServiceLayer
   # The +Command+ contains the logic related to the command pattern. This
   # pattern is one of the bases of the service layer. It provides the logic
@@ -26,18 +28,13 @@ module ServiceLayer
   #       end
   #     }
   #
-  #     def initialize(period:, date: nil)
-  #       @period = period
-  #       @date = date
-  #     end
-  #
   #     def perform
-  #       action = PERIODS.fetch(@period.to_sym,
+  #       action = PERIODS.fetch(period.to_sym,
   #                              ->(**) { raise InvalidRange.new(kind) })
   #
   #       range = action.call(
   #         today: Time.now.utc,
-  #         date: @date
+  #         date: context[:date]
   #       )
   #
   #       { range: range }
@@ -49,7 +46,11 @@ module ServiceLayer
   module Command
     # @!visibility private
     def self.included(base)
-      base.extend ClassMethods
+      base.class_eval do
+        extend ClassMethods
+
+        attr_reader :context
+      end
     end
 
     # @!classmethods
@@ -57,14 +58,33 @@ module ServiceLayer
       # Invokes a +Command+. This is the primary public API method to a command.
       #
       # Delegates the initialization, and performs the service.
-      def perform(*args, &block)
-        new(*args, &block).perform
+      #
+      # @param context [Hash]
+      def perform(**context)
+        new(**context).perform
       end
+    end
+
+    # Creates a new object using +Command+ module.
+    #
+    # @param context [Hash]
+    def initialize(**context)
+      @context = OpenStruct.new(context)
+      context_reader
     end
 
     # @abstract must implement perform method when include command pattern.
     def perform
       raise NotImplementedError.new('Service must implement a perform method')
+    end
+
+    private
+
+    def context_reader
+      context.to_h.each_key do |key|
+        define_singleton_method(key) { context[key] }
+        define_singleton_method("#{key}=") { |value| context[key] = value }
+      end
     end
   end
 end

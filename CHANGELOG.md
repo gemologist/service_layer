@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* The `Command` handles the initialization process. Automatically provides
+getter and setter for each attributes sent to the command.
+
 ## 0.1.0 (2017-10-09)
 
 ### Added
