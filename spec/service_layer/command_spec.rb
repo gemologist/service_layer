@@ -3,6 +3,14 @@
 RSpec.describe ServiceLayer::Command do
   let(:described_module) { Class.new.__send__(:include, described_class) }
 
+  describe '.new' do
+    let(:command) { described_module.new(email: 'adriensldy@gmail.com') }
+
+    it 'creates accessor for each key' do
+      expect(command).to respond_to(:email, :email=)
+    end
+  end
+
   describe '.perform' do
     let!(:command) { instance_spy(described_module) }
 

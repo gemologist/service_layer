@@ -25,12 +25,6 @@ Or install it yourself as:
 
 ```ruby
 class MatchingService < ApplicationService
-  attr_reader :tender
-
-  def initialize(tender:)
-    @tender = tender
-  end
-
   def perform
     # business logic
     Success.new(data: matches_created)
