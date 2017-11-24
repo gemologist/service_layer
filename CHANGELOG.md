@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Add explicit `#failure?` on `Response`. Return the opposite of `#success?`.
+
 ## 0.1.0 (2017-10-09)
 
 ### Added

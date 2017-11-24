@@ -15,6 +15,10 @@ module ServiceLayer
       def success?
         raise NotImplementedError
       end
+
+      def failure?
+        !success?
+      end
     end
   end
 end
