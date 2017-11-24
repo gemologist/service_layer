@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * The `Command` handles the initialization process. Automatically provides
 getter and setter for each attributes sent to the command.
+* Add explicit `#failure?` on `Response`. Return the opposite of `#success?`.
 
 ## 0.1.0 (2017-10-09)
 
