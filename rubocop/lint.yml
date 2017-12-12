@@ -111,10 +111,17 @@ Lint/LiteralInInterpolation:
 Lint/Loop:
   Enabled: true
 
+Lint/MissingCopEnableDirective:
+  Enabled: true
+  MaximumRangeSize: .inf
+
 Lint/MultipleCompare:
   Enabled: true
 
 Lint/NestedMethodDefinition:
+  Enabled: true
+
+Lint/NestedPercentLiteral:
   Enabled: true
 
 Lint/NextWithoutAccumulator:
@@ -153,9 +160,6 @@ Lint/RescueException:
 Lint/RescueType:
   Enabled: true
 
-Lint/RescueWithoutErrorClass:
-  Enabled: true
-
 Lint/ReturnInVoidContext:
   Enabled: true
 
@@ -171,6 +175,10 @@ Lint/SafeNavigationChain:
 Lint/ScriptPermission:
   Enabled: true
 
+Lint/ShadowedArgument:
+  Enabled: true
+  IgnoreImplicitReferences: false
+
 Lint/ShadowedException:
   Enabled: true
 
@@ -178,6 +186,9 @@ Lint/ShadowingOuterLocalVariable:
   Enabled: true
 
 Lint/StringConversionInInterpolation:
+  Enabled: true
+
+Lint/Syntax:
   Enabled: true
 
 Lint/UnderscorePrefixedVariableName:
