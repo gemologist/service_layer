@@ -27,6 +27,28 @@ Layout/CaseIndentation:
   IndentOneStep: false
   IndentationWidth: ~
 
+# Override
+Layout/ClassStructure:
+  Enabled: true
+  Categories:
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+    attribute:
+      - attr_accessor
+      - attr_reader
+      - attr_writer
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - attribute
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_methods
+    - private_methods
+
 Layout/ClosingParenthesisIndentation:
   Enabled: true
 
@@ -52,6 +74,9 @@ Layout/EmptyLines:
   Enabled: true
 
 Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+
+Layout/EmptyLinesAroundArguments:
   Enabled: true
 
 Layout/EmptyLinesAroundBeginBody:
@@ -209,6 +234,7 @@ Layout/SpaceAroundOperators:
 Layout/SpaceBeforeBlockBraces:
   Enabled: true
   EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: space
 
 Layout/SpaceBeforeComma:
   Enabled: true
@@ -227,6 +253,11 @@ Layout/SpaceInLambdaLiteral:
   Enabled: true
   EnforcedStyle: require_no_space
 
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBrackets: no_space
+
 Layout/SpaceInsideArrayPercentLiteral:
   Enabled: true
 
@@ -235,9 +266,6 @@ Layout/SpaceInsideBlockBraces:
   EnforcedStyle: space
   EnforcedStyleForEmptyBraces: no_space
   SpaceBeforeBlockParameters: true
-
-Layout/SpaceInsideBrackets:
-  Enabled: true
 
 # Override
 Layout/SpaceInsideHashLiteralBraces:
@@ -253,6 +281,10 @@ Layout/SpaceInsidePercentLiteralDelimiters:
 
 Layout/SpaceInsideRangeLiteral:
   Enabled: true
+
+Layout/SpaceInsideReferenceBrackets:
+  Enabled: true
+  EnforcedStyle: no_space
 
 Layout/SpaceInsideStringInterpolation:
   Enabled: true
