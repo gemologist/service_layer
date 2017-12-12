@@ -1,5 +1,15 @@
+Gemspec/DuplicatedAssignment:
+  Enabled: true
+  Include:
+    - '**/*.gemspec'
+
 Gemspec/OrderedDependencies:
   Enabled: true
   TreatCommentsAsGroupSeparators: true
+  Include:
+    - '**/*.gemspec'
+
+Gemspec/RequiredRubyVersion:
+  Enabled: true
   Include:
     - '**/*.gemspec'

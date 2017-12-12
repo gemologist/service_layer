@@ -11,6 +11,7 @@ Style/ArrayJoin:
 
 Style/AsciiComments:
   Enabled: true
+  AllowedChars: []
 
 Style/Attr:
   Enabled: true
@@ -73,6 +74,9 @@ Style/CollectionMethods:
 Style/ColonMethodCall:
   Enabled: true
 
+Style/ColonMethodDefinition:
+  Enabled: true
+
 Style/CommandLiteral:
   Enabled: true
 
@@ -125,12 +129,18 @@ Style/EachForSimpleLoop:
 Style/EachWithObject:
   Enabled: true
 
+Style/EmptyBlockParameter:
+  Enabled: true
+
 Style/EmptyCaseCondition:
   Enabled: true
 
 Style/EmptyElse:
   Enabled: true
   EnforcedStyle: both
+
+Style/EmptyLambdaParameter:
+  Enabled: true
 
 Style/EmptyLiteral:
   Enabled: true
@@ -145,7 +155,13 @@ Style/Encoding:
 Style/EndBlock:
   Enabled: true
 
+Style/EvalWithLocation:
+  Enabled: true
+
 Style/EvenOdd:
+  Enabled: true
+
+Style/ExtendSelf:
   Enabled: true
 
 Style/FlipFlop:
@@ -399,6 +415,9 @@ Style/RaiseArgs:
   Enabled: true
   EnforcedStyle: compact
 
+Style/RandomWithOffset:
+  Enabled: true
+
 Style/RedundantBegin:
   Enabled: true
 
@@ -428,8 +447,13 @@ Style/RedundantSelf:
 Style/RegexpLiteral:
   Enabled: false
 
+# Relate to Style/RescueStandardError
 Style/RescueModifier:
   Enabled: true
+
+Style/RescueStandardError:
+  Enabled: true
+  EnforcedStyle: explicit
 
 # Override
 Style/ReturnNil:
@@ -473,6 +497,10 @@ Style/StabbyLambdaParentheses:
 Style/StderrPuts:
   Enabled: true
 
+# Override
+Style/StringHashKeys:
+  Enabled: true
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes
@@ -511,6 +539,9 @@ Style/TernaryParentheses:
   EnforcedStyle: require_no_parentheses
   AllowSafeAssignment: false
 
+Style/TrailingBodyOnMethodDefinition:
+  Enabled: true
+
 Style/TrailingCommaInArguments:
   Enabled: true
   EnforcedStyleForMultiline: no_comma
@@ -518,6 +549,9 @@ Style/TrailingCommaInArguments:
 Style/TrailingCommaInLiteral:
   Enabled: true
   EnforcedStyleForMultiline: no_comma
+
+Style/TrailingMethodEndStatement:
+  Enabled: true
 
 Style/TrailingUnderscoreVariable:
   Enabled: true
