@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] (2017-12-15)
+
 ### Added
 
 * The `Command` handles the initialization process. Automatically provides
@@ -20,4 +22,5 @@ getter and setter for each attributes sent to the command.
 * Implement Command pattern, imposes the implementation of a `#perform` method
 and provides a delegation of the execution logic of the command.
 
-[Unreleased]: https://github.com/gemologist/service_layer/compare/v0.1.0...master
+[Unreleased]: https://github.com/gemologist/service_layer/compare/v0.2.0...master
+[0.2.0]: https://github.com/gemologist/service_layer/compare/v0.1.0...v0.2.0
