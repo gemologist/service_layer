@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Update the `Command` context. Remove the `OpenStruct` dependency.
+Automatically create and assign properties based on initialize inputs.
+
 ## [0.2.0] (2017-11-25)
 
 ### Added
