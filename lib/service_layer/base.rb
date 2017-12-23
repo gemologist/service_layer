@@ -40,6 +40,5 @@ module ServiceLayer
   #        @data={:gmail=>[...], :outlook=>[...]}, @message=nil>
   class Base
     include Command
-    include Response
   end
 end

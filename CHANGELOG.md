@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Update the `Command` context. Remove the `OpenStruct` dependency.
 Automatically create and assign properties based on initialize inputs.
+* Replace `Response` objects with `Result`. `Result` attributes are dynamically
+defined and readable like `Command` objects.
 
 ## [0.2.0] (2017-11-25)
 
