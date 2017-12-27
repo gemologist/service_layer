@@ -161,9 +161,6 @@ Style/EvalWithLocation:
 Style/EvenOdd:
   Enabled: true
 
-Style/ExtendSelf:
-  Enabled: true
-
 Style/FlipFlop:
   Enabled: true
 
