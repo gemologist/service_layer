@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Encapsulate the return of the execution of a `Command`. To force uniformity of
+the Service Layer API output using `Result`.
+
 ### Changed
 
 * Update the `Command` context. Remove the `OpenStruct` dependency.

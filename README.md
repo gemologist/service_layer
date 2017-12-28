@@ -25,9 +25,6 @@ Or install it yourself as:
 class MatchingService < ApplicationService
   def perform
     # business logic
-    ServiceLayer::Result.new(matches_created: matches_created)
-  rescue Geocoder::OverQueryLimitError => exception
-    ServiceLayer::Result.new(error: exception).tap(&:fail!)
   end
 end
 ```
