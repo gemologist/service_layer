@@ -230,7 +230,6 @@ Layout/SpaceAroundOperators:
   Enabled: true
   AllowForAlignment: true
 
-# Override
 Layout/SpaceBeforeBlockBraces:
   Enabled: true
   EnforcedStyle: space
