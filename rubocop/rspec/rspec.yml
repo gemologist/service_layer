@@ -56,6 +56,10 @@ RSpec/ExampleLength:
   Enabled: true
   Max: 3
 
+RSpec/ExampleWithoutDescription:
+  Enabled: true
+  EnforcedStyle: always_allow
+
 # Override
 RSpec/ExampleWording:
   Enabled: true
@@ -71,6 +75,10 @@ RSpec/ExampleWording:
 RSpec/ExpectActual:
   Enabled: true
   Exclude: []
+
+RSpec/ExpectChange:
+  Enabled: true
+  EnforcedStyle: method_call
 
 RSpec/ExpectInHook:
   Enabled: true
