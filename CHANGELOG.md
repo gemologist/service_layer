@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Replace `Response` objects with `Result`. `Result` attributes are dynamically
+defined and readable like `Command` objects.
+
 ## [0.2.0] (2017-12-15)
 
 ### Added
