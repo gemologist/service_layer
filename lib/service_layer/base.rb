@@ -6,6 +6,9 @@ module ServiceLayer
   # @abstract Inherit to make your class a service.
   #   To implement a service, override {#perform}.
   #
+  # The call of a service returns a {Result}, allowing to know the success of
+  # this execution.
+  #
   # @example
   #   class Dispatcher < ServiceLayer::Base
   #     DOMAINS = {
@@ -15,8 +18,7 @@ module ServiceLayer
   #     }.freeze
   #
   #     def perform
-  #       domains_contacts = contacts.domain_batches
-  #       domains_contacts.each do |domain, domain_contacts|
+  #       contacts.domain_batches.each do |domain, domain_contacts|
   #         domain_contacts.find_in_batches(of: fetch_domain(domain).size)
   #                        .with_index do |batch_contacts, batch_index|
   #           wait = fetch_domain(domain).time * batch_index
@@ -24,8 +26,6 @@ module ServiceLayer
   #                          .deliver_later(wait: wait)
   #         end
   #       end
-  #
-  #       Success.new(data: domains_contacts)
   #     end
   #
   #     private
@@ -36,8 +36,8 @@ module ServiceLayer
   #   end
   #
   #   Dispatcher.perform(email: Email.find(34), contacts: Contact.all)
-  #   # => #<ServiceLayer::Response::Success:0x007fe46104f798
-  #        @data={:gmail=>[...], :outlook=>[...]}, @message=nil>
+  #   # => #<ServiceLayer::Result:0x007f8e5c12cf90
+  #        @gmail=[...], @outlook=[...] @success=true>
   class Base
     include Command
   end

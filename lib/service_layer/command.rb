@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'ostruct'
+require 'service_layer/result'
 
 module ServiceLayer
   # The +Command+ contains the logic related to the command pattern. This
@@ -42,7 +43,9 @@ module ServiceLayer
   #   end
   #
   #   PeriodConverter.perform(period: :this_week)
-  #   # => {:range=>2017-10-01 00:00:00 +0200..2017-10-07 12:17:20 +0200}
+  #   # => #<ServiceLayer::Result:0x00558a4cc55428
+  #        @range=2017-10-01 00:00:00 +0200..2017-10-07 12:17:20 +0200,
+  #        @success=true>
   module Command
     # @!visibility private
     def self.included(base)
@@ -60,8 +63,9 @@ module ServiceLayer
       # Delegates the initialization, and performs the service.
       #
       # @param context [Hash]
+      # @return [Result]
       def perform(**context)
-        new(**context).perform
+        new(**context).execute
       end
     end
 
@@ -73,7 +77,19 @@ module ServiceLayer
       context_reader
     end
 
+    # Encapsulates the execution of the service and determines the result state.
+    #
+    # @return [Result]
+    def execute
+      result = perform
+    rescue StandardError => exception
+      Result.new(error: exception).tap(&:fail!)
+    else
+      Result.new(result)
+    end
+
     # @abstract must implement perform method when include command pattern.
+    # @return [Hash]
     def perform
       raise NotImplementedError.new('Service must implement a perform method')
     end
