@@ -27,9 +27,9 @@ Or install it yourself as:
 class MatchingService < ApplicationService
   def perform
     # business logic
-    Success.new(data: matches_created)
+    ServiceLayer::Result.new(matches_created: matches_created)
   rescue Geocoder::OverQueryLimitError => exception
-    Error.new(data: exception, message: exception.message)
+    ServiceLayer::Result.new(error: exception).tap(&:fail!)
   end
 end
 ```
@@ -44,7 +44,7 @@ class TendersController < ApplicationController
         format.html { redirect_to tender_path(@tender), status: :see_other }
       else
         format.html do
-          flash.now[:message] = t(result.message)
+          flash.now[:message] = t(result.error.message)
           render :edit
         end
       end

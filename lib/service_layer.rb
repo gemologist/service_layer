@@ -9,5 +9,4 @@ require 'service_layer/version'
 module ServiceLayer
   autoload :Base, 'service_layer/base'
   autoload :Command, 'service_layer/command'
-  autoload :Response, 'service_layer/response'
 end
