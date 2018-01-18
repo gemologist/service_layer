@@ -5,8 +5,12 @@ RSpec.describe ServiceLayer::Command do
   let(:command) { described_module.new(email: 'adriensldy@gmail.com') }
 
   describe '.new' do
-    it 'creates accessor for each key' do
+    it 'creates properties' do
       expect(command).to respond_to(:email, :email=)
+    end
+
+    it 'assigns properties' do
+      expect(command).to have_attributes(email: 'adriensldy@gmail.com')
     end
   end
 

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'ostruct'
 require 'service_layer/result'
 
 module ServiceLayer
@@ -35,7 +34,7 @@ module ServiceLayer
   #
   #       range = action.call(
   #         today: Time.now.utc,
-  #         date: context[:date]
+  #         date: @date
   #       )
   #
   #       { range: range }
@@ -49,11 +48,7 @@ module ServiceLayer
   module Command
     # @!visibility private
     def self.included(base)
-      base.class_eval do
-        extend ClassMethods
-
-        attr_reader :context
-      end
+      base.extend ClassMethods
     end
 
     # @!classmethods
@@ -62,19 +57,26 @@ module ServiceLayer
       #
       # Delegates the initialization, and performs the service.
       #
-      # @param context [Hash]
+      # @param properties [Hash]
       # @return [Result]
-      def perform(**context)
-        new(**context).execute
+      def perform(**properties)
+        new(**properties).execute
       end
     end
 
     # Creates a new object using +Command+ module.
     #
-    # @param context [Hash]
-    def initialize(**context)
-      @context = OpenStruct.new(context)
-      context_reader
+    # Creates and assigns properties dynamically.
+    #
+    # @param properties [Hash]
+    def initialize(**properties)
+      singleton_class.class_exec(properties.keys) do |fields|
+        attr_accessor(*fields)
+      end
+
+      properties.each do |field, value|
+        __send__ "#{field}=", value
+      end
     end
 
     # Encapsulates the execution of the service and determines the result state.
@@ -92,15 +94,6 @@ module ServiceLayer
     # @return [Hash]
     def perform
       raise NotImplementedError.new('Service must implement a perform method')
-    end
-
-    private
-
-    def context_reader
-      context.to_h.each_key do |key|
-        define_singleton_method(key) { context[key] }
-        define_singleton_method("#{key}=") { |value| context[key] = value }
-      end
     end
   end
 end
