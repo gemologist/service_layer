@@ -17,6 +17,8 @@ the Service Layer API output using `Result`.
 
 * Replace `Response` objects with `Result`. `Result` attributes are dynamically
 defined and readable like `Command` objects.
+* Update `Command` context. Remove the `OpenStruct` dependency. Automatically
+create and assign properties based on initialize inputs.
 
 ## [0.2.0] (2017-12-15)
 
