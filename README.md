@@ -23,6 +23,8 @@ Or install it yourself as:
 
 ```ruby
 class MatchingService < ApplicationService
+  property :tender
+
   def perform
     # business logic
   end

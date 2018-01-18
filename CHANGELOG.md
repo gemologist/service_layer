@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Add the `Contract` structure. The Contract design pattern allows to setup
+properties of a `Class` and auto-initialize this ones.
+
 ## [0.3.0] (2017-12-28)
 
 ### Added

@@ -6,6 +6,9 @@ module ServiceLayer
   # @abstract Inherit to make your class a service.
   #   To implement a service, override {#perform}.
   #
+  # You can declare the contract of your service. It allows to define the input
+  # attribute.
+  #
   # The call of a service returns a {Result}, allowing to know the success of
   # this execution.
   #
@@ -16,6 +19,8 @@ module ServiceLayer
   #       outlook: Outlook.new,
   #       yahoo: Yahoo.new
   #     }.freeze
+  #
+  #     property :email, :contacts
   #
   #     def perform
   #       contacts.domain_batches.each do |domain, domain_contacts|
@@ -40,5 +45,6 @@ module ServiceLayer
   #        @gmail=[...], @outlook=[...] @success=true>
   class Base
     include Command
+    include Contract
   end
 end
