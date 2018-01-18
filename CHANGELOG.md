@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Encapsulate the return of the execution of a `Command`. To force uniformity of
 the Service Layer API output using `Result`.
+* Add `Contract` structure. The Contract pattern allows to setup properties of a
+`Class` and auto-initialize this ones.
 
 ### Changed
 
