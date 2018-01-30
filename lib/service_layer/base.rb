@@ -7,7 +7,7 @@ module ServiceLayer
   #   To implement a service, override {#perform}.
   #
   # You can declare the contract of your service. It allows to define the input
-  # attribute.
+  # attribute and the output attribute.
   #
   # The call of a service returns a {Result}, allowing to know the success of
   # this execution.
@@ -41,10 +41,23 @@ module ServiceLayer
   #   end
   #
   #   Dispatcher.perform(email: Email.find(34), contacts: Contact.all)
-  #   # => #<ServiceLayer::Result:0x007f8e5c12cf90
-  #        @gmail=[...], @outlook=[...] @success=true>
+  #   # => #<ServiceLayer::Result:0x007f8e5c12cf90 @success=true>
   class Base
     include Command
     include Contract
+
+    # Overrides the command mechanism execution. Provides the rendering keys by
+    # following the contract pattern.
+    #
+    # @return [Result]
+    def execute
+      perform
+    rescue StandardError => exception
+      self.class.render :error
+      self.error = exception
+      render.tap(&:fail!)
+    else
+      render
+    end
   end
 end
