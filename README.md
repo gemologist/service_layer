@@ -26,6 +26,7 @@ Or install it yourself as:
 ```ruby
 class MatchingService < ApplicationService
   property :tender
+  render :matches_created
 
   def perform
     # business logic

@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 the Service Layer API output using `Result`.
 * Add `Contract` structure. The Contract pattern allows to setup properties of a
 `Class` and auto-initialize this ones.
+* Add the contract rendering setup. Allowing to define, with `.render`, the
+rendered properties. These will be auto-transferred to the `Result` returned
+with `#render`.
 
 ### Changed
 
