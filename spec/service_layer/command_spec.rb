@@ -30,6 +30,24 @@ RSpec.describe ServiceLayer::Command do
     end
   end
 
+  describe '.to_proc' do
+    subject { described_module.to_proc }
+
+    it { is_expected.to respond_to(:call) }
+
+    context 'when call the proc' do
+      before do
+        allow(described_module).to receive(:perform)
+        described_module.to_proc.call(email: 'adriensldy@gmail.com')
+      end
+
+      it 'calls .perform' do
+        expect(described_module)
+          .to have_received(:perform).once.with(email: 'adriensldy@gmail.com')
+      end
+    end
+  end
+
   describe '#execute' do
     subject(:result) { command.execute }
 
