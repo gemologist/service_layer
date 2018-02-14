@@ -15,6 +15,8 @@ the Service Layer API output using `Result`.
 * Add the contract rendering setup. Allowing to define, with `.render`, the
 rendered properties. These will be auto-transferred to the `Result` returned
 with `#render`.
+* Add an alias `.call` for `Command.perform`.
+* Implement implicit `Command` class casting to `Proc`.
 
 ### Changed
 

@@ -41,7 +41,7 @@ module ServiceLayer
   #     end
   #   end
   #
-  #   PeriodConverter.perform(period: :this_week)
+  #   PeriodConverter.(period: :this_week)
   #   # => #<ServiceLayer::Result:0x00558a4cc55428
   #        @range=2017-10-01 00:00:00 +0200..2017-10-07 12:17:20 +0200,
   #        @success=true>
@@ -61,6 +61,16 @@ module ServiceLayer
       # @return [Result]
       def perform(**properties)
         new(**properties).execute
+      end
+
+      # @!method call(**properties)
+      alias call perform
+
+      # Converts the +Command+ to a callable.
+      #
+      # @return [Proc]
+      def to_proc
+        ->(**properties) { perform(**properties) }
       end
     end
 
