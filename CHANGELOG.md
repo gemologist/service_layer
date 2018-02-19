@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Add an alias `.call` for `Command.perform`.
+* Implement implicit `Command` class casting to `Proc`.
+
 ## [0.4.0] (2018-01-30)
 
 ### Added
