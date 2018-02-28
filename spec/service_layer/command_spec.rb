@@ -82,6 +82,26 @@ RSpec.describe ServiceLayer::Command do
       it 'sets the error to Result' do
         expect(result.error).to be_a TypeError
       end
+
+      context 'with rescued set to this kind of exception' do
+        before { described_module.rescued TypeError }
+
+        it 'returns a failure Result' do
+          is_expected.to be_failure
+        end
+
+        it 'sets the error to Result' do
+          expect(result.error).to be_a TypeError
+        end
+      end
+
+      context 'without rescued set to this kind of exception' do
+        before { described_module.rescued ArgumentError }
+
+        it 'raises the exception' do
+          expect(&method(:subject)).to raise_error TypeError
+        end
+      end
     end
   end
 

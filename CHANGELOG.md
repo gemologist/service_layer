@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Add an alias `.call` for `Command.perform`.
 * Implement implicit `Command` class casting to `Proc`.
+* Setup the exceptions to rescue during the command invoke.
 
 ## [0.4.0] (2018-01-30)
 

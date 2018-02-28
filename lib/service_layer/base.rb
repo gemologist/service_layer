@@ -52,7 +52,7 @@ module ServiceLayer
     # @return [Result]
     def execute
       perform
-    rescue StandardError => exception
+    rescue *exceptions => exception
       self.class.render :error
       self.error = exception
       render.tap(&:fail!)
