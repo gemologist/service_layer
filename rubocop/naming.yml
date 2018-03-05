@@ -71,6 +71,9 @@ Naming/HeredocDelimiterNaming:
   Blacklist:
     - !ruby/regexp '/(^|\s)(EO[A-Z]{1}|END)(\s|$)/'
 
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+
 Naming/MethodName:
   Enabled: true
   EnforcedStyle: snake_case
@@ -110,6 +113,22 @@ Naming/PredicateName:
     - define_singleton_method
   Exclude:
     - 'spec/**/*'
+
+# Override
+Naming/UncommunicativeBlockParamName:
+  Enabled: true
+  MinNameLength: 3
+  AllowNamesEndingInNumbers: false
+  AllowedNames: [_]
+  ForbiddenNames: []
+
+# Override
+Naming/UncommunicativeMethodParamName:
+  Enabled: true
+  MinNameLength: 3
+  AllowNamesEndingInNumbers: false
+  AllowedNames: []
+  ForbiddenNames: []
 
 Naming/VariableName:
   Enabled: true

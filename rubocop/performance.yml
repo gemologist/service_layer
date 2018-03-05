@@ -38,9 +38,6 @@ Performance/FlatMap:
   Enabled: true
   EnabledForFlattenWithoutParams: true
 
-Performance/HashEachMethods:
-  Enabled: true
-
 Performance/LstripRstrip:
   Enabled: true
 

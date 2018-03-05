@@ -142,6 +142,9 @@ Style/EmptyElse:
 Style/EmptyLambdaParameter:
   Enabled: true
 
+Style/EmptyLineAfterGuardClause:
+  Enabled: false
+
 Style/EmptyLiteral:
   Enabled: true
 
@@ -159,6 +162,9 @@ Style/EvalWithLocation:
   Enabled: true
 
 Style/EvenOdd:
+  Enabled: true
+
+Style/ExpandPathArguments:
   Enabled: true
 
 Style/FlipFlop:
@@ -536,14 +542,24 @@ Style/TernaryParentheses:
   EnforcedStyle: require_no_parentheses
   AllowSafeAssignment: false
 
+Style/TrailingBodyOnClass:
+  Enabled: true
+
 Style/TrailingBodyOnMethodDefinition:
+  Enabled: true
+
+Style/TrailingBodyOnModule:
   Enabled: true
 
 Style/TrailingCommaInArguments:
   Enabled: true
   EnforcedStyleForMultiline: no_comma
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInHashLiteral:
   Enabled: true
   EnforcedStyleForMultiline: no_comma
 

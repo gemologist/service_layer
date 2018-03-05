@@ -13,10 +13,8 @@ Lint/AssignmentInCondition:
   Enabled: true
   AllowSafeAssignment: true
 
-# Override
-Lint/BlockAlignment:
+Lint/BigDecimalNew:
   Enabled: true
-  EnforcedStyleAlignWith: start_of_line
 
 Lint/BooleanSymbol:
   Enabled: true
@@ -24,17 +22,8 @@ Lint/BooleanSymbol:
 Lint/CircularArgumentReference:
   Enabled: true
 
-Lint/ConditionPosition:
-  Enabled: true
-
 Lint/Debugger:
   Enabled: true
-
-# Override
-Lint/DefEndAlignment:
-  Enabled: true
-  EnforcedStyleAlignWith: start_of_line
-  AutoCorrect: true
 
 Lint/DeprecatedClassMethods:
   Enabled: true
@@ -67,12 +56,6 @@ Lint/EmptyInterpolation:
 
 Lint/EmptyWhen:
   Enabled: true
-
-# Override
-Lint/EndAlignment:
-  Enabled: true
-  EnforcedStyleAlignWith: keyword
-  AutoCorrect: true
 
 Lint/EndInMethod:
   Enabled: true
@@ -129,6 +112,13 @@ Lint/NextWithoutAccumulator:
   Enabled: true
 
 Lint/NonLocalExitFromIterator:
+  Enabled: true
+
+# Override
+Lint/NumberConversion:
+  Enabled: true
+
+Lint/OrderedMagicComments:
   Enabled: true
 
 Lint/ParenthesesAsGroupedExpression:
@@ -194,7 +184,10 @@ Lint/UnderscorePrefixedVariableName:
 Lint/UnifiedInteger:
   Enabled: true
 
-Lint/UnneededDisable:
+Lint/UnneededCopDisableDirective:
+  Enabled: true
+
+Lint/UnneededCopEnableDirective:
   Enabled: true
 
 Lint/UnneededRequireStatement:
@@ -238,5 +231,7 @@ Lint/UselessElseWithoutRescue:
 Lint/UselessSetterCall:
   Enabled: true
 
+# Override
 Lint/Void:
   Enabled: true
+  CheckForMethodsWithNoSideEffects: true
