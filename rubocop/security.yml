@@ -8,5 +8,8 @@ Security/JSONLoad:
 Security/MarshalLoad:
   Enabled: true
 
+Security/Open:
+  Enabled: true
+
 Security/YAMLLoad:
   Enabled: true
