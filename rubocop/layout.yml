@@ -18,6 +18,11 @@ Layout/AlignParameters:
   EnforcedStyle: with_first_parameter
   IndentationWidth: ~
 
+# Override
+Layout/BlockAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: start_of_line
+
 Layout/BlockEndNewline:
   Enabled: true
 
@@ -55,12 +60,26 @@ Layout/ClosingParenthesisIndentation:
 Layout/CommentIndentation:
   Enabled: true
 
+Layout/ConditionPosition:
+  Enabled: true
+
+Layout/DefEndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: start_of_line
+  AutoCorrect: true
+
 Layout/DotPosition:
   Enabled: true
   EnforcedStyle: leading
 
 Layout/ElseAlignment:
   Enabled: true
+
+# Override
+Layout/EmptyComment:
+  Enabled: true
+  AllowBorderComment: false
+  AllowMarginComment: true
 
 Layout/EmptyLineAfterMagicComment:
   Enabled: true
@@ -86,6 +105,10 @@ Layout/EmptyLinesAroundBlockBody:
   Enabled: true
   EnforcedStyle: no_empty_lines
 
+Layout/EmptyLinesAroundClassBody:
+  Enabled: true
+  EnforcedStyle: no_empty_lines
+
 Layout/EmptyLinesAroundExceptionHandlingKeywords:
   Enabled: true
 
@@ -95,6 +118,12 @@ Layout/EmptyLinesAroundMethodBody:
 Layout/EmptyLinesAroundModuleBody:
   Enabled: true
   EnforcedStyle: no_empty_lines
+
+# Override
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: keyword
+  AutoCorrect: true
 
 # Override
 Layout/EndOfLine:
@@ -284,6 +313,7 @@ Layout/SpaceInsideRangeLiteral:
 Layout/SpaceInsideReferenceBrackets:
   Enabled: true
   EnforcedStyle: no_space
+  EnforcedStyleForEmptyBrackets: no_space
 
 Layout/SpaceInsideStringInterpolation:
   Enabled: true
