@@ -15,7 +15,7 @@ module ServiceLayer
   #   class Account
   #     include ServiceLayer::Contract
   #
-  #     property :email
+  #     property! :email
   #     render :domain
   #
   #     def domain!
@@ -43,6 +43,11 @@ module ServiceLayer
       end
 
       # @return [Array<String, Symbol>]
+      def required_properties
+        @required_properties ||= []
+      end
+
+      # @return [Array<String, Symbol>]
       def render_fields
         @render_fields ||= []
       end
@@ -54,6 +59,15 @@ module ServiceLayer
       def property(*fields)
         attr_accessor(*fields)
         properties.concat fields
+      end
+
+      # Defines all required property fields who will be auto-assign.
+      #
+      # @param fields [Array<String, Symbol>]
+      # @return [void]
+      def property!(*fields)
+        attr_accessor(*fields)
+        required_properties.concat fields
       end
 
       # Defines all fields who will be render.
@@ -68,12 +82,35 @@ module ServiceLayer
 
     # Creates a new object using +Contract+ module.
     #
-    # Sets properties defined with {.property}.
+    # Sets properties defined with {.property!} and {.property}.
     #
     # @param attributes [Hash]
+    # @raise [ArgumentError] when a required property is missing.
     def initialize(**attributes)
-      self.class.properties.each do |property|
-        __send__ "#{property}=", attributes.delete(property)
+      self.properties = attributes
+      self.required_properties = attributes
+    end
+
+    private def properties=(**attributes)
+      assign_properties(self.class.properties, attributes)
+    end
+
+    private def required_properties=(**attributes)
+      assign_properties(
+        self.class.required_properties,
+        attributes
+      ) do |property, value|
+        if value.nil?
+          raise ArgumentError.new("The :#{property} property is missing")
+        end
+      end
+    end
+
+    private def assign_properties(properties, **attributes)
+      properties.each do |property|
+        value = attributes[property]
+        yield property, value if block_given?
+        __send__ "#{property}=", value
       end
     end
 

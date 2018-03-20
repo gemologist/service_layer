@@ -20,7 +20,7 @@ module ServiceLayer
   #       yahoo: Yahoo.new
   #     }.freeze
   #
-  #     property :email, :contacts
+  #     property! :email, :contacts
   #
   #     def perform
   #       contacts.domain_batches.each do |domain, domain_contacts|
