@@ -607,6 +607,9 @@ Style/UnneededInterpolation:
 Style/UnneededPercentQ:
   Enabled: true
 
+Style/UnpackFirst:
+  Enabled: true
+
 Style/VariableInterpolation:
   Enabled: true
 
