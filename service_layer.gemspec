@@ -25,8 +25,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*', '.yardopts', 'README.md', 'CHANGELOG.md',
                    'LICENSE']
 
-  spec.required_ruby_version = '>= 2.2.8'
-  spec.required_rubygems_version = '>= 2.7.0'
+  spec.required_ruby_version = '>= 2.3.7'
 
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'rubocop', '~> 0.54.0'
