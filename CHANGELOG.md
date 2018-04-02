@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Implement implicit `Command` class casting to `Proc`.
 * Setup the exceptions to rescue during the command invoke.
 * Allow the `Contract` to set some properties as required ones.
+* Allow `Contract` to set initial values for optional properties. Make the
+`Contract` more flexible. The `.property` accepts `key => value` arguments
+containing the name of the auto-assign field as "key" and the initial value as
+"value".
 
 ## [0.4.0] (2018-01-30)
 

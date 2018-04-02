@@ -37,14 +37,9 @@ module ServiceLayer
 
     # @!classmethods
     module ClassMethods
-      # @return [Array<String, Symbol>]
+      # @return [Hash]
       def properties
-        @properties ||= []
-      end
-
-      # @return [Array<String, Symbol>]
-      def required_properties
-        @required_properties ||= []
+        @properties ||= {}
       end
 
       # @return [Array<String, Symbol>]
@@ -55,10 +50,12 @@ module ServiceLayer
       # Defines all property fields who will be auto-assign.
       #
       # @param fields [Array<String, Symbol>]
+      # @param properties [Hash] field => default_value
       # @return [void]
-      def property(*fields)
-        attr_accessor(*fields)
-        properties.concat fields
+      def property(*fields, **properties)
+        attr_accessor(*(fields + properties.keys))
+
+        properties!(*fields).merge!(properties)
       end
 
       # Defines all required property fields who will be auto-assign.
@@ -67,7 +64,15 @@ module ServiceLayer
       # @return [void]
       def property!(*fields)
         attr_accessor(*fields)
-        required_properties.concat fields
+
+        default_value = ->(property) do
+          raise ArgumentError.new("The :#{property} property is missing")
+        end
+        properties!(*fields, &default_value)
+      end
+
+      private def properties!(*fields, &default_value)
+        properties.merge! Hash[fields.map { |field| [field, default_value] }]
       end
 
       # Defines all fields who will be render.
@@ -87,22 +92,22 @@ module ServiceLayer
     # @param attributes [Hash]
     # @raise [ArgumentError] when a required property is missing.
     def initialize(**attributes)
-      self.properties = attributes
-      self.required_properties = attributes
+      self.class.properties.each do |property, default_value|
+        default = default_value_to_proc default_value
+        __send__ "#{property}=", attributes.fetch(property, &default)
+      end
     end
 
-    private def properties=(**attributes)
-      assign_properties(self.class.properties, attributes)
-    end
-
-    private def required_properties=(**attributes)
-      assign_properties(
-        self.class.required_properties,
-        attributes
-      ) do |property, value|
-        if value.nil?
-          raise ArgumentError.new("The :#{property} property is missing")
+    private def default_value_to_proc(default_value)
+      if default_value.respond_to?(:to_proc)
+        default_value = default_value.to_proc
+        if default_value.arity.zero?
+          Proc.new { default_value.call }
+        else
+          default_value
         end
+      else
+        Proc.new { default_value }
       end
     end
 
