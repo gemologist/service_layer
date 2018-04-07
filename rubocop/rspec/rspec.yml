@@ -10,6 +10,9 @@ RSpec/AnyInstance:
 RSpec/AroundBlock:
   Enabled: true
 
+RSpec/Be:
+  Enabled: true
+
 RSpec/BeEql:
   Enabled: true
 
@@ -166,6 +169,9 @@ RSpec/NotToNot:
 RSpec/OverwritingSetup:
   Enabled: true
 
+RSpec/Pending:
+  Enabled: false
+
 RSpec/PredicateMatcher:
   Enabled: true
   Strict: true
@@ -188,6 +194,9 @@ RSpec/ScatteredSetup:
   Enabled: true
 
 RSpec/SharedContext:
+  Enabled: true
+
+RSpec/SharedExamples:
   Enabled: true
 
 RSpec/SingleArgumentMessageChain:
