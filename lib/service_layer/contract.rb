@@ -53,7 +53,7 @@ module ServiceLayer
       # @param properties [Hash] field => default_value
       # @return [void]
       def property(*fields, **properties)
-        attr_accessor(*(fields + properties.keys))
+        fields!(*(fields + properties.keys))
 
         properties!(*fields).merge!(properties)
       end
@@ -63,7 +63,7 @@ module ServiceLayer
       # @param fields [Array<String, Symbol>]
       # @return [void]
       def property!(*fields)
-        attr_accessor(*fields)
+        fields!(*fields)
 
         default_value = ->(property) do
           raise ArgumentError.new("The :#{property} property is missing")
@@ -73,6 +73,11 @@ module ServiceLayer
 
       private def properties!(*fields, &default_value)
         properties.merge! Hash[fields.map { |field| [field, default_value] }]
+      end
+
+      private def fields!(*fields)
+        attr_accessor(*fields)
+        private(*(fields + fields.map { |field| :"#{field}=" }))
       end
 
       # Defines all fields who will be render.

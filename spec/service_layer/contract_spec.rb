@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'support/matchers/have_fields'
+require 'support/matchers/respond_to_private'
+
 RSpec.describe ServiceLayer::Contract do
   let(:described_module) { Class.new.__send__(:include, described_class) }
 
@@ -10,12 +13,12 @@ RSpec.describe ServiceLayer::Contract do
 
     before { described_module.property :email }
 
-    it 'creates properties' do
-      is_expected.to respond_to(:email, :email=)
+    it 'creates private properties' do
+      is_expected.to respond_to_private(:email, :email=)
     end
 
     it 'assigns properties' do
-      is_expected.to have_attributes(properties)
+      is_expected.to have_fields(properties)
     end
 
     context 'when a property is missing' do
@@ -23,7 +26,7 @@ RSpec.describe ServiceLayer::Contract do
         subject { described_module.new }
 
         it 'assigns properties to `nil`' do
-          is_expected.to have_attributes(email: nil)
+          is_expected.to have_fields(email: nil)
         end
       end
 
@@ -33,7 +36,7 @@ RSpec.describe ServiceLayer::Contract do
         before { described_module.property email: 'adriensldy@gmail.com' }
 
         it 'fallbacks to the default defined' do
-          is_expected.to have_attributes(properties)
+          is_expected.to have_fields(properties)
         end
       end
 
@@ -43,7 +46,7 @@ RSpec.describe ServiceLayer::Contract do
         before { described_module.property email: -> { 'adriensldy@gmail.com' } }
 
         it 'fallbacks to the output of the default defined block' do
-          is_expected.to have_attributes(properties)
+          is_expected.to have_fields(properties)
         end
       end
     end
@@ -56,12 +59,12 @@ RSpec.describe ServiceLayer::Contract do
 
     before { described_module.property! :email }
 
-    it 'creates properties' do
-      is_expected.to respond_to(:email, :email=)
+    it 'creates private properties' do
+      is_expected.to respond_to_private(:email, :email=)
     end
 
     it 'assigns properties' do
-      is_expected.to have_attributes(properties)
+      is_expected.to have_fields(properties)
     end
 
     context 'when a property is missing' do
@@ -87,7 +90,7 @@ RSpec.describe ServiceLayer::Contract do
 
     it 'returns a Result containing the rendering attributes' do
       contract.domain = 'gmail.com'
-      is_expected.to have_attributes(domain: 'gmail.com')
+      is_expected.to have_fields(domain: 'gmail.com')
     end
   end
 end

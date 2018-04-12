@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 containing the name of the auto-assign field as "key" and the initial value as
 "value".
 
+### Changed
+
+* Make accessors unavailable outside of services.
+
 ## [0.4.0] (2018-01-30)
 
 ### Added

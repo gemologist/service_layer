@@ -1,16 +1,19 @@
 # frozen_string_literal: true
 
+require 'support/matchers/have_fields'
+require 'support/matchers/respond_to_private'
+
 RSpec.describe ServiceLayer::Command do
   let(:described_module) { Class.new { include ServiceLayer::Command } }
   let(:command) { described_module.new(email: 'adriensldy@gmail.com') }
 
   describe '.new' do
-    it 'creates properties' do
-      expect(command).to respond_to(:email, :email=)
+    it 'creates private properties' do
+      expect(command).to respond_to_private(:email, :email=)
     end
 
     it 'assigns properties' do
-      expect(command).to have_attributes(email: 'adriensldy@gmail.com')
+      expect(command).to have_fields(email: 'adriensldy@gmail.com')
     end
   end
 
