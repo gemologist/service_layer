@@ -2,6 +2,6 @@
 
 module ServiceLayer
   module Version
-    STRING = '0.4.0'.freeze
+    STRING = '0.5.0'.freeze
   end
 end

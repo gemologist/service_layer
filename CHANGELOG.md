@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] (2018-04-20)
+
 ### Added
 
 * Add an alias `.call` for `Command.perform`.
@@ -63,7 +65,8 @@ method. This makes it possible to know the state of success of an execution.
 `#perform` method and provides a delegation of the execution logic of the
 command.
 
-[Unreleased]: https://github.com/gemologist/service_layer/compare/v0.4.0...master
+[Unreleased]: https://github.com/gemologist/service_layer/compare/v0.5.0...master
+[0.5.0]: https://github.com/gemologist/service_layer/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/gemologist/service_layer/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/gemologist/service_layer/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/gemologist/service_layer/compare/v0.1.0...v0.2.0
