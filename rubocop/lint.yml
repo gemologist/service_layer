@@ -161,6 +161,10 @@ Lint/SafeNavigationChain:
     - try
     - try!
 
+# Override
+Lint/SafeNavigationConsistency:
+  Enabled: false
+
 Lint/ScriptPermission:
   Enabled: true
 

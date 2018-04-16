@@ -250,6 +250,7 @@ Style/MethodCallWithArgsParentheses:
 
 Style/MethodCallWithoutArgsParentheses:
   Enabled: true
+  IgnoredMethods: []
 
 Style/MethodCalledOnDoEndBlock:
   Enabled: true

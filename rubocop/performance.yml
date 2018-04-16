@@ -89,6 +89,9 @@ Performance/TimesMap:
 Performance/UnfreezeString:
   Enabled: false
 
+Performance/UnneededSort:
+  Enabled: true
+
 # Override
 Performance/UriDefaultParser:
   Enabled: false
