@@ -159,6 +159,10 @@ Lint/SafeNavigationChain:
   Enabled: true
   Whitelist: []
 
+# Override
+Lint/SafeNavigationConsistency:
+  Enabled: false
+
 Lint/ScriptPermission:
   Enabled: true
 

@@ -255,6 +255,7 @@ Style/MethodCallWithArgsParentheses:
 
 Style/MethodCallWithoutArgsParentheses:
   Enabled: true
+  IgnoredMethods: []
 
 # Override
 # Correlate with Style/MultilineBlockChain
