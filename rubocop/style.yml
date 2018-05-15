@@ -139,9 +139,6 @@ Style/EmptyElse:
 Style/EmptyLambdaParameter:
   Enabled: true
 
-Style/EmptyLineAfterGuardClause:
-  Enabled: false
-
 Style/EmptyLiteral:
   Enabled: true
 
@@ -259,7 +256,7 @@ Style/MethodDefParentheses:
   Enabled: true
   EnforcedStyle: require_parentheses
 
-Style/MethodMissing:
+Style/MethodMissingSuper:
   Enabled: true
 
 Style/MinMax:
@@ -269,6 +266,9 @@ Style/MinMax:
 Style/MissingElse:
   Enabled: true
   EnforcedStyle: case
+
+Style/MissingRespondToMissing:
+  Enabled: true
 
 Style/MixinGrouping:
   Enabled: true
@@ -379,6 +379,7 @@ Style/ParallelAssignment:
 Style/ParenthesesAroundCondition:
   Enabled: true
   AllowSafeAssignment: true
+  AllowInMultilineConditions: false
 
 Style/PercentLiteralDelimiters:
   Enabled: true

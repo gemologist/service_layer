@@ -63,6 +63,9 @@ Lint/EndInMethod:
 Lint/EnsureReturn:
   Enabled: true
 
+Lint/ErbNewArguments:
+  Enabled: true
+
 Lint/FloatOutOfRange:
   Enabled: true
 
@@ -177,6 +180,10 @@ Lint/ShadowedException:
 
 Lint/ShadowingOuterLocalVariable:
   Enabled: true
+
+# Override
+Lint/SplatKeywordArguments:
+  Enabled: false
 
 Lint/StringConversionInInterpolation:
   Enabled: true
