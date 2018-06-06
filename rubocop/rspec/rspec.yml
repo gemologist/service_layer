@@ -177,6 +177,9 @@ RSpec/PredicateMatcher:
   Strict: true
   EnforcedStyle: inflected
 
+RSpec/ReceiveCounts:
+  Enabled: true
+
 RSpec/RepeatedDescription:
   Enabled: true
 
