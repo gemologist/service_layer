@@ -54,6 +54,10 @@ Layout/ClassStructure:
     - protected_methods
     - private_methods
 
+# Override
+Layout/ClosingHeredocIndentation:
+  Enabled: true
+
 Layout/ClosingParenthesisIndentation:
   Enabled: true
 
@@ -187,6 +191,9 @@ Layout/IndentationWidth:
   Width: 2
 
 Layout/InitialIndentation:
+  Enabled: true
+
+Layout/LeadingBlankLines:
   Enabled: true
 
 Layout/LeadingCommentSpace:

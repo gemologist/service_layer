@@ -181,10 +181,6 @@ Lint/ShadowedException:
 Lint/ShadowingOuterLocalVariable:
   Enabled: true
 
-# Override
-Lint/SplatKeywordArguments:
-  Enabled: false
-
 Lint/StringConversionInInterpolation:
   Enabled: true
 

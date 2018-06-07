@@ -1,3 +1,7 @@
+# Override
+Style/AccessModifierDeclarations:
+  Enabled: false
+
 Style/Alias:
   Enabled: true
   EnforcedStyle: prefer_alias
@@ -592,6 +596,9 @@ Style/UnlessElse:
   Enabled: true
 
 Style/UnneededCapitalW:
+  Enabled: true
+
+Style/UnneededCondition:
   Enabled: true
 
 Style/UnneededInterpolation:
