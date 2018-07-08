@@ -73,6 +73,7 @@ Naming/HeredocDelimiterNaming:
 
 Naming/MemoizedInstanceVariableName:
   Enabled: true
+  EnforcedStyleForLeadingUnderscores: disallowed
 
 Naming/MethodName:
   Enabled: true

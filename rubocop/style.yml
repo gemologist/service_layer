@@ -240,6 +240,9 @@ Style/InverseMethods:
     :select: :reject
     :select!: :reject!
 
+Style/IpAddresses:
+  Enabled: false
+
 # Override
 Style/Lambda:
   Enabled: true
@@ -470,9 +473,16 @@ Style/ReturnNil:
   Enabled: true
   EnforcedStyle: return
 
+# Override
 Style/SafeNavigation:
   Enabled: true
   ConvertCodeThatCanStartToReturnNil: true
+  Whitelist:
+    - present?
+    - blank?
+    - presence
+    - try
+    - try!
 
 Style/SelfAssignment:
   Enabled: true
