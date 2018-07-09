@@ -67,10 +67,12 @@ Layout/CommentIndentation:
 Layout/ConditionPosition:
   Enabled: true
 
+# Override
 Layout/DefEndAlignment:
   Enabled: true
   EnforcedStyleAlignWith: start_of_line
   AutoCorrect: true
+  Severity: warning
 
 Layout/DotPosition:
   Enabled: true
@@ -131,6 +133,7 @@ Layout/EndAlignment:
   Enabled: true
   EnforcedStyleAlignWith: keyword
   AutoCorrect: true
+  Severity: warning
 
 # Override
 Layout/EndOfLine:
@@ -340,3 +343,4 @@ Layout/TrailingBlankLines:
 
 Layout/TrailingWhitespace:
   Enabled: true
+  AllowInHeredoc: false
