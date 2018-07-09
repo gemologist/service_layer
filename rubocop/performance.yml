@@ -39,6 +39,9 @@ Performance/FlatMap:
   Enabled: true
   EnabledForFlattenWithoutParams: true
 
+Performance/InefficientHashSearch:
+  Enabled: true
+
 Performance/LstripRstrip:
   Enabled: true
 
@@ -88,6 +91,9 @@ Performance/TimesMap:
 # Override
 Performance/UnfreezeString:
   Enabled: false
+
+Performance/UnneededSort:
+  Enabled: true
 
 # Override
 Performance/UriDefaultParser:

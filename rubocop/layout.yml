@@ -54,6 +54,10 @@ Layout/ClassStructure:
     - protected_methods
     - private_methods
 
+# Override
+Layout/ClosingHeredocIndentation:
+  Enabled: true
+
 Layout/ClosingParenthesisIndentation:
   Enabled: true
 
@@ -63,10 +67,12 @@ Layout/CommentIndentation:
 Layout/ConditionPosition:
   Enabled: true
 
+# Override
 Layout/DefEndAlignment:
   Enabled: true
   EnforcedStyleAlignWith: start_of_line
   AutoCorrect: true
+  Severity: warning
 
 Layout/DotPosition:
   Enabled: true
@@ -80,6 +86,9 @@ Layout/EmptyComment:
   Enabled: true
   AllowBorderComment: false
   AllowMarginComment: true
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
 
 Layout/EmptyLineAfterMagicComment:
   Enabled: true
@@ -124,6 +133,7 @@ Layout/EndAlignment:
   Enabled: true
   EnforcedStyleAlignWith: keyword
   AutoCorrect: true
+  Severity: warning
 
 # Override
 Layout/EndOfLine:
@@ -184,6 +194,9 @@ Layout/IndentationWidth:
   Width: 2
 
 Layout/InitialIndentation:
+  Enabled: true
+
+Layout/LeadingBlankLines:
   Enabled: true
 
 Layout/LeadingCommentSpace:
@@ -303,6 +316,7 @@ Layout/SpaceInsideHashLiteralBraces:
 
 Layout/SpaceInsideParens:
   Enabled: true
+  EnforcedStyle: no_space
 
 Layout/SpaceInsidePercentLiteralDelimiters:
   Enabled: true
@@ -329,3 +343,4 @@ Layout/TrailingBlankLines:
 
 Layout/TrailingWhitespace:
   Enabled: true
+  AllowInHeredoc: false

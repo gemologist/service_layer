@@ -1,3 +1,7 @@
+# Override
+Style/AccessModifierDeclarations:
+  Enabled: false
+
 Style/Alias:
   Enabled: true
   EnforcedStyle: prefer_alias
@@ -139,9 +143,6 @@ Style/EmptyElse:
 Style/EmptyLambdaParameter:
   Enabled: true
 
-Style/EmptyLineAfterGuardClause:
-  Enabled: false
-
 Style/EmptyLiteral:
   Enabled: true
 
@@ -250,6 +251,7 @@ Style/MethodCallWithArgsParentheses:
 
 Style/MethodCallWithoutArgsParentheses:
   Enabled: true
+  IgnoredMethods: []
 
 Style/MethodCalledOnDoEndBlock:
   Enabled: true
@@ -258,7 +260,7 @@ Style/MethodDefParentheses:
   Enabled: true
   EnforcedStyle: require_parentheses
 
-Style/MethodMissing:
+Style/MethodMissingSuper:
   Enabled: true
 
 Style/MinMax:
@@ -268,6 +270,9 @@ Style/MinMax:
 Style/MissingElse:
   Enabled: true
   EnforcedStyle: case
+
+Style/MissingRespondToMissing:
+  Enabled: true
 
 Style/MixinGrouping:
   Enabled: true
@@ -378,6 +383,7 @@ Style/ParallelAssignment:
 Style/ParenthesesAroundCondition:
   Enabled: true
   AllowSafeAssignment: true
+  AllowInMultilineConditions: false
 
 Style/PercentLiteralDelimiters:
   Enabled: true
@@ -454,9 +460,16 @@ Style/ReturnNil:
   Enabled: true
   EnforcedStyle: return
 
+# Override
 Style/SafeNavigation:
   Enabled: true
   ConvertCodeThatCanStartToReturnNil: true
+  Whitelist:
+    - present?
+    - blank?
+    - presence
+    - try
+    - try!
 
 Style/SelfAssignment:
   Enabled: true
@@ -592,10 +605,16 @@ Style/UnlessElse:
 Style/UnneededCapitalW:
   Enabled: true
 
+Style/UnneededCondition:
+  Enabled: false
+
 Style/UnneededInterpolation:
   Enabled: true
 
 Style/UnneededPercentQ:
+  Enabled: true
+
+Style/UnpackFirst:
   Enabled: true
 
 Style/VariableInterpolation:

@@ -63,6 +63,9 @@ Lint/EndInMethod:
 Lint/EnsureReturn:
   Enabled: true
 
+Lint/ErbNewArguments:
+  Enabled: true
+
 Lint/FloatOutOfRange:
   Enabled: true
 
@@ -161,6 +164,10 @@ Lint/SafeNavigationChain:
     - try
     - try!
 
+# Override
+Lint/SafeNavigationConsistency:
+  Enabled: false
+
 Lint/ScriptPermission:
   Enabled: true
 
@@ -237,3 +244,4 @@ Lint/UselessSetterCall:
 # Override
 Lint/Void:
   Enabled: true
+  CheckForMethodsWithNoSideEffects: true
