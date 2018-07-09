@@ -10,6 +10,9 @@ RSpec/AnyInstance:
 RSpec/AroundBlock:
   Enabled: true
 
+RSpec/Be:
+  Enabled: true
+
 RSpec/BeEql:
   Enabled: true
 
@@ -45,7 +48,13 @@ RSpec/EmptyExampleGroup:
   Enabled: true
   CustomIncludeMethods: []
 
+RSpec/EmptyLineAfterExampleGroup:
+  Enabled: true
+
 RSpec/EmptyLineAfterFinalLet:
+  Enabled: true
+
+RSpec/EmptyLineAfterHook:
   Enabled: true
 
 RSpec/EmptyLineAfterSubject:
@@ -167,10 +176,16 @@ RSpec/NotToNot:
 RSpec/OverwritingSetup:
   Enabled: true
 
+RSpec/Pending:
+  Enabled: false
+
 RSpec/PredicateMatcher:
   Enabled: true
   Strict: true
   EnforcedStyle: inflected
+
+RSpec/ReceiveCounts:
+  Enabled: true
 
 RSpec/RepeatedDescription:
   Enabled: true
@@ -189,6 +204,9 @@ RSpec/ScatteredSetup:
   Enabled: true
 
 RSpec/SharedContext:
+  Enabled: true
+
+RSpec/SharedExamples:
   Enabled: true
 
 RSpec/SingleArgumentMessageChain:
