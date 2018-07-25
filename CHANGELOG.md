@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 * Add support for [dry-monads](https://github.com/dry-rb/dry-monads).
+* Allow to configure the monadic dependency used as Service Layer API output.
 
 ## [0.3.0] (2018-03-08)
 
