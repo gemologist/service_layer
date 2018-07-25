@@ -53,6 +53,20 @@ class TendersController < ApplicationController
 end
 ```
 
+## Configuration
+
+### Monad adapter
+
+May be set to one of `[:dry, :without]`.
+
+```ruby
+# config/initializers/service_layer.rb
+ 
+ServiceLayer.configure do |config|
+  config.monad = :dry
+end
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on [GitHub](https://github.com/adriensldy/service_layer).
