@@ -26,11 +26,11 @@ RSpec.describe ServiceLayer::Contract do
 
     before { described_module.render :domain }
 
-    it 'returns a Result' do
-      is_expected.to be_a(ServiceLayer::Result)
+    it 'returns a Monads::Adapter' do
+      is_expected.to be_a(ServiceLayer::Monads::Adapter)
     end
 
-    it 'returns a Result containing the rendering attributes' do
+    it 'returns a monads containing the rendering attributes' do
       contract.domain = 'gmail.com'
       is_expected.to have_attributes(domain: 'gmail.com')
     end

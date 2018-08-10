@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'service_layer/result'
-
 module ServiceLayer
   # The +Contract+ makes it possible to structure an object.
   #
@@ -79,14 +77,15 @@ module ServiceLayer
 
     # Renders the contract.
     #
-    # @return [Result] contains the render fields defined with {.render}.
+    # @return [Monads::Adapter] contains the render fields defined with
+    #   {.render}.
     def render
       render_fields = {}
       self.class.render_fields.each do |field|
         render_fields[field] = __send__(field)
       end
 
-      Result.new(**render_fields)
+      Monads.create_success(**render_fields)
     end
   end
 end

@@ -60,11 +60,11 @@ RSpec.describe ServiceLayer::Command do
       expect(command).to have_received(:perform).once.with(no_args)
     end
 
-    it 'returns a Result' do
-      is_expected.to be_a(ServiceLayer::Result)
+    it 'returns a Monads::Adapter' do
+      is_expected.to be_a(ServiceLayer::Monads::Adapter)
     end
 
-    it 'returns a success Result' do
+    it 'returns a success monads' do
       is_expected.to be_success
     end
 
@@ -75,11 +75,11 @@ RSpec.describe ServiceLayer::Command do
     context 'when an exception raises' do
       before { allow(command).to receive(:perform).and_raise TypeError.new }
 
-      it 'returns a failure Result' do
+      it 'returns a failure monads' do
         is_expected.to be_failure
       end
 
-      it 'sets the error to Result' do
+      it 'sets the error to monads' do
         expect(result.error).to be_a TypeError
       end
     end

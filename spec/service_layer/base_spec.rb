@@ -18,15 +18,15 @@ RSpec.describe ServiceLayer::Base do
       expect(service).to have_received(:perform).once.with(no_args)
     end
 
-    it 'returns a Result' do
-      expect(result).to be_a(ServiceLayer::Result)
+    it 'returns a Monads::Adapter' do
+      expect(result).to be_a(ServiceLayer::Monads::Adapter)
     end
 
-    it 'returns a success Result' do
+    it 'returns a success monads' do
       expect(result).to be_success
     end
 
-    it 'returns a Result containing the rendering attributes' do
+    it 'returns a monads containing the rendering attributes' do
       expect(result).to have_attributes(domain: 'gmail.com')
     end
 
@@ -35,11 +35,11 @@ RSpec.describe ServiceLayer::Base do
         allow(service).to receive(:perform).and_raise
       end
 
-      it 'returns a failure Result' do
+      it 'returns a failure monads' do
         expect(result).to be_failure
       end
 
-      it 'sets the error to Result' do
+      it 'sets the error to monads' do
         expect(result.error).to be_a StandardError
       end
     end
