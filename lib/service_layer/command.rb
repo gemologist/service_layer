@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'service_layer/result'
-
 module ServiceLayer
   # The +Command+ contains the logic related to the command pattern. This
   # pattern is one of the bases of the service layer. It provides the logic
@@ -91,13 +89,11 @@ module ServiceLayer
 
     # Encapsulates the execution of the service and determines the result state.
     #
-    # @return [Result]
+    # @return [Monads::Adapter]
     def execute
-      result = perform
+      Monads.create_success(perform)
     rescue StandardError => exception
-      Result.new(error: exception).tap(&:fail!)
-    else
-      Result.new(result)
+      Monads.create_failure(exception)
     end
 
     # @abstract must implement perform method when include command pattern.

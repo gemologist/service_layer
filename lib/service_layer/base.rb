@@ -9,8 +9,8 @@ module ServiceLayer
   # You can declare the contract of your service. It allows to define the input
   # attribute and the output attribute.
   #
-  # The call of a service returns a {Result}, allowing to know the success of
-  # this execution.
+  # The call of a service returns a {Monads::Adapter}, allowing to know the
+  # success of this execution.
   #
   # @example
   #   class Dispatcher < ServiceLayer::Base
@@ -49,13 +49,11 @@ module ServiceLayer
     # Overrides the command mechanism execution. Provides the rendering keys by
     # following the contract pattern.
     #
-    # @return [Result]
+    # @return [Monads::Adapter]
     def execute
       perform
     rescue StandardError => exception
-      self.class.render :error
-      self.error = exception
-      render.tap(&:fail!)
+      Monads.create_failure(exception)
     else
       render
     end
