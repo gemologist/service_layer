@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'rspec', '~> 3.6'
   spec.add_development_dependency 'rubocop', '~> 0.58.0'
-  spec.add_development_dependency 'rubocop-rspec', '~> 1.27'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.28'
   spec.add_development_dependency 'yard', '~> 0.9.9'
   spec.add_development_dependency 'yard-classmethods', '~> 1.0'
 end
