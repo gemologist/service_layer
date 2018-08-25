@@ -108,9 +108,16 @@ RSpec/HookArgument:
   Enabled: true
   EnforcedStyle: implicit
 
+RSpec/HooksBeforeExamples:
+  Enabled: true
+
 RSpec/ImplicitExpect:
   Enabled: true
   EnforcedStyle: is_expected
+
+# Override
+RSpec/ImplicitSubject:
+  Enabled: false
 
 RSpec/InstanceSpy:
   Enabled: true
