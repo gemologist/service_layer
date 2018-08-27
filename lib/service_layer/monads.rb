@@ -34,7 +34,22 @@ module ServiceLayer
     end
 
     private_class_method def self.factory
+      if monad == :without
+        deprecation_warning *caller[1].match(/^(.+?):(\d+)(?::in `(.*?)')?/)
+                                      .captures
+      end
+
       FACTORIES[monad]
+    end
+
+    private_class_method def self.deprecation_warning(file, line, method)
+      message = <<-DEPRECATE
+        DEPRECATION WARNING: You are using deprecated behavior which will be
+        removed from the next minor release; use :dry adapter in the config
+        instead. (called from #{method} at #{file}:#{line})
+      DEPRECATE
+
+      warn message.strip.gsub(/\s+/, ' ')
     end
 
     private_class_method def self.monad

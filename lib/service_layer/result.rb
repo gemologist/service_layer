@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 module ServiceLayer
+  # @deprecated Use {https://github.com/dry-rb/dry-monads dry-monads} instead.
+  #   Configure {ServiceLayer} to use {Monads::Adapter::Dry it}.
+  #     ServiceLayer.configure do |config|
+  #       config.monad = :dry
+  #     end
+  #
   # The +Result+ formats the return of complex logics.
   #
   # Knows the execution status, success or failure. Access fields by using

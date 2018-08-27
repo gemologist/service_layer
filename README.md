@@ -57,7 +57,8 @@ end
 
 ### Monad adapter
 
-May be set to one of `[:dry, :without]`.
+May be set to one of `[:dry, :without]`. `:without` is the default one but also
+deprecated. Override with `:dry`.
 
 ```ruby
 # config/initializers/service_layer.rb
