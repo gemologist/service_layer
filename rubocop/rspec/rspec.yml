@@ -109,9 +109,16 @@ RSpec/HookArgument:
   Enabled: true
   EnforcedStyle: implicit
 
+RSpec/HooksBeforeExamples:
+  Enabled: true
+
 RSpec/ImplicitExpect:
   Enabled: true
   EnforcedStyle: is_expected
+
+# Override
+RSpec/ImplicitSubject:
+  Enabled: false
 
 RSpec/InstanceSpy:
   Enabled: true
@@ -151,6 +158,9 @@ RSpec/MessageSpies:
   Enabled: true
   EnforcedStyle: have_received
 
+RSpec/MissingExampleGroupArgument:
+  Enabled: true
+
 RSpec/MultipleDescribes:
   Enabled: true
 
@@ -185,6 +195,9 @@ RSpec/PredicateMatcher:
   EnforcedStyle: inflected
 
 RSpec/ReceiveCounts:
+  Enabled: true
+
+RSpec/ReceiveNever:
   Enabled: true
 
 RSpec/RepeatedDescription:
