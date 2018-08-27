@@ -12,7 +12,6 @@ RSpec.describe ServiceLayer::Monads do
         ServiceLayer.configure { |config| config.monad = :without }
         allow(ServiceLayer::Monads::Adapter::ServiceLayerResult)
           .to receive(:new).and_call_original
-        success
       end
 
       it 'returns a Monads::Adapter::ServiceLayerResult' do
@@ -28,8 +27,13 @@ RSpec.describe ServiceLayer::Monads do
       end
 
       it 'adapts ServiceLayer::Result' do
+        success
         expect(ServiceLayer::Monads::Adapter::ServiceLayerResult)
           .to have_received(:new).with(an_instance_of(ServiceLayer::Result))
+      end
+
+      it 'warns a deprecation message' do
+        expect { success }.to output(/DEPRECATION WARNING/).to_stderr
       end
     end
 
@@ -61,7 +65,6 @@ RSpec.describe ServiceLayer::Monads do
         ServiceLayer.configure { |config| config.monad = :without }
         allow(ServiceLayer::Monads::Adapter::ServiceLayerResult)
           .to receive(:new).and_call_original
-        failure
       end
 
       it 'returns a Monads::Adapter::ServiceLayerResult' do
@@ -77,8 +80,13 @@ RSpec.describe ServiceLayer::Monads do
       end
 
       it 'adapts ServiceLayer::Result' do
+        failure
         expect(ServiceLayer::Monads::Adapter::ServiceLayerResult)
           .to have_received(:new).with(an_instance_of(ServiceLayer::Result))
+      end
+
+      it 'warns a deprecation message' do
+        expect { failure }.to output(/DEPRECATION WARNING/).to_stderr
       end
     end
 

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Deprecated
+
+* The Monad pattern is a better Service Layer API output than the `Result` API.
+
 ## [0.4.0] (2018-08-23)
 
 ### Added
