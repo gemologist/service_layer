@@ -51,6 +51,19 @@ module ServiceLayer
 
     # @!classmethods
     module ClassMethods
+      # @return [Array<Class>] a list of +Exception+.
+      def exceptions
+        @exceptions ||= []
+      end
+
+      # Defines the types of exceptions that must be rescued.
+      #
+      # @param exceptions [Array<Class>] a list of +Exception+.
+      # @return [void]
+      def rescued(*exceptions)
+        self.exceptions.concat exceptions
+      end
+
       # Invokes a +Command+. This is the primary public API method to a command.
       #
       # Delegates the initialization, and performs the service.
@@ -92,7 +105,7 @@ module ServiceLayer
     # @return [Monads::Adapter]
     def execute
       Monads.create_success(perform)
-    rescue StandardError => exception
+    rescue *exceptions => exception
       Monads.create_failure(exception)
     end
 
@@ -100,6 +113,14 @@ module ServiceLayer
     # @return [Hash]
     def perform
       raise NotImplementedError.new('Service must implement a perform method')
+    end
+
+    private def exceptions
+      if self.class.exceptions.empty?
+        ServiceLayer.configuration.default_exceptions
+      else
+        self.class.exceptions
+      end
     end
   end
 end

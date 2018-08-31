@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Allow `Command` to setup the exceptions to rescue.
+
 ### Deprecated
 
 * The Monad pattern is a better Service Layer API output than the `Result` API.

@@ -4,7 +4,7 @@ RSpec.describe ServiceLayer::Base do
   let(:service) { described_class.new }
 
   describe '#execute' do
-    let(:result) { service.execute }
+    subject(:result) { service.execute }
 
     before do
       allow(described_class).to receive(:new).and_return(service)
@@ -31,16 +31,35 @@ RSpec.describe ServiceLayer::Base do
     end
 
     context 'when an exception raises' do
-      before do
-        allow(service).to receive(:perform).and_raise
-      end
+      before { allow(service).to receive(:perform).and_raise TypeError.new }
+      after { described_class.exceptions.clear }
 
       it 'returns a failure monads' do
         expect(result).to be_failure
       end
 
       it 'sets the error to monads' do
-        expect(result.error).to be_a StandardError
+        expect(result.error).to be_a TypeError
+      end
+
+      context 'with rescued set to this kind of exception' do
+        before { described_class.rescued TypeError }
+
+        it 'returns a failure monads' do
+          expect(result).to be_failure
+        end
+
+        it 'sets the error to monads' do
+          expect(result.error).to be_a TypeError
+        end
+      end
+
+      context 'without rescued set to this kind of exception' do
+        before { described_class.rescued ArgumentError }
+
+        it 'raises the exception' do
+          expect(&method(:result)).to raise_error TypeError
+        end
       end
     end
   end

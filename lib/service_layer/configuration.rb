@@ -7,12 +7,18 @@
 module ServiceLayer
   # Maintains all system-wide configuration for +ServiceLayer+.
   class Configuration
+    # Defines the default rescued exceptions list.
+    #
+    # @return [Array<Class>] a list of +Exception+.
+    attr_accessor :default_exceptions
+
     # Defines the monad adapter.
     #
     # @return [Symbol]
     attr_accessor :monad
 
     def initialize
+      @default_exceptions = [StandardError]
       @monad = :without
     end
   end

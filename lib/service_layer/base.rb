@@ -52,7 +52,7 @@ module ServiceLayer
     # @return [Monads::Adapter]
     def execute
       perform
-    rescue StandardError => exception
+    rescue *exceptions => exception
       Monads.create_failure(exception)
     else
       render
