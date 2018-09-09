@@ -87,6 +87,7 @@ Layout/EmptyComment:
   AllowBorderComment: false
   AllowMarginComment: true
 
+# Override
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
@@ -157,6 +158,7 @@ Layout/FirstHashElementLineBreak:
 Layout/FirstMethodArgumentLineBreak:
   Enabled: false
 
+# Depend on Style/MultilineMethodSignature
 Layout/FirstMethodParameterLineBreak:
   Enabled: false
 
@@ -231,6 +233,7 @@ Layout/MultilineMethodCallIndentation:
   IndentationWidth: ~
 
 # Override
+# Depend on Style/MultilineMethodSignature
 Layout/MultilineMethodDefinitionBraceLayout:
   Enabled: false
 

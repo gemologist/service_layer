@@ -103,8 +103,10 @@ Style/ConditionalAssignment:
 Style/Copyright:
   Enabled: false
 
+# Override
 Style/DateTime:
   Enabled: true
+  AllowCoercion: false
 
 Style/DefWithParentheses:
   Enabled: true
@@ -310,6 +312,10 @@ Style/MultilineMemoization:
   Enabled: true
   EnforcedStyle: keyword
 
+# Override
+Style/MultilineMethodSignature:
+  Enabled: true
+
 Style/MultilineTernaryOperator:
   Enabled: true
 
@@ -343,6 +349,7 @@ Style/Next:
 
 Style/NilComparison:
   Enabled: true
+  EnforcedStyle: predicate
 
 # Override
 Style/NonNilCheck:
@@ -367,6 +374,7 @@ Style/NumericPredicate:
   Enabled: true
   EnforcedStyle: predicate
   AutoCorrect: true
+  IgnoredMethods: []
   Exclude: []
 
 Style/OneLineConditional:
