@@ -49,6 +49,7 @@ Metrics/MethodLength:
   Enabled: true
   CountComments: false
   Max: 10
+  ExcludedMethods: []
 
 # Override
 Metrics/ModuleLength:
