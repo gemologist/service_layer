@@ -227,8 +227,13 @@ RSpec/SingleArgumentMessageChain:
 RSpec/SubjectStub:
   Enabled: true
 
+RSpec/UnspecifiedException:
+  Enabled: true
+
+# Override
 RSpec/VerifiedDoubles:
   Enabled: true
+  IgnoreNameless: false
   IgnoreSymbolicNames: false
 
 RSpec/VoidExpect:
