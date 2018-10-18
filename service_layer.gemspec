@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*', '.yardopts', 'README.md', 'CHANGELOG.md',
                    'LICENSE']
 
-  spec.required_ruby_version = '>= 2.2.8'
+  spec.required_ruby_version = '>= 2.3.8'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'dry-monads', '~> 1.0'
