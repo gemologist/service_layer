@@ -39,6 +39,7 @@ Metrics/MethodLength:
   Enabled: true
   CountComments: false
   Max: 15
+  ExcludedMethods: []
 
 Metrics/ModuleLength:
   Enabled: true

@@ -87,6 +87,7 @@ Layout/EmptyComment:
   AllowBorderComment: false
   AllowMarginComment: true
 
+# Override
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 

@@ -2,12 +2,14 @@
 Performance/Caller:
   Enabled: false
 
-# Override
 Performance/CaseWhenSplat:
   Enabled: false
 
 # Override
 Performance/Casecmp:
+  Enabled: false
+
+Performance/ChainArrayAllocation:
   Enabled: false
 
 Performance/CompareWithBlock:
