@@ -48,6 +48,10 @@ Performance/LstripRstrip:
   Enabled: true
 
 # Override
+Performance/OpenStruct:
+  Enabled: true
+
+# Override
 Performance/RangeInclude:
   Enabled: false
 
