@@ -28,6 +28,9 @@ Lint/Debugger:
 Lint/DeprecatedClassMethods:
   Enabled: true
 
+Lint/DisjunctiveAssignmentInConstructor:
+  Enabled: true
+
 Lint/DuplicateCaseCondition:
   Enabled: true
 
