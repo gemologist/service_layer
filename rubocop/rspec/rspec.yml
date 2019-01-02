@@ -171,8 +171,10 @@ RSpec/MultipleExpectations:
 RSpec/MultipleSubjects:
   Enabled: true
 
+# Override
 RSpec/NamedSubject:
   Enabled: true
+  IgnoreSharedExamples: false
 
 RSpec/NestedGroups:
   Enabled: true
