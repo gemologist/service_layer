@@ -69,6 +69,9 @@ Lint/EnsureReturn:
 Lint/ErbNewArguments:
   Enabled: true
 
+Lint/FlipFlop:
+  Enabled: true
+
 Lint/FloatOutOfRange:
   Enabled: true
 
