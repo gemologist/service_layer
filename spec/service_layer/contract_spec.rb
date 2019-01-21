@@ -17,6 +17,36 @@ RSpec.describe ServiceLayer::Contract do
     it 'assigns properties' do
       is_expected.to have_attributes(properties)
     end
+
+    context 'when a property is missing' do
+      context 'without default value' do
+        subject { described_module.new }
+
+        it 'assigns properties to `nil`' do
+          is_expected.to have_attributes(email: nil)
+        end
+      end
+
+      context 'with default value' do
+        subject { described_module.new }
+
+        before { described_module.property email: 'adriensldy@gmail.com' }
+
+        it 'fallbacks to the default defined' do
+          is_expected.to have_attributes(properties)
+        end
+      end
+
+      context 'with default block value' do
+        subject { described_module.new }
+
+        before { described_module.property email: -> { 'adriensldy@gmail.com' } }
+
+        it 'fallbacks to the output of the default defined block' do
+          is_expected.to have_attributes(properties)
+        end
+      end
+    end
   end
 
   describe '.property!' do
