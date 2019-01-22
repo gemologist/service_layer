@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Make accessors unavailable outside of services.
+
 ## [0.5.0] (2018-09-07)
 
 ### Added

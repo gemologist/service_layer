@@ -93,6 +93,7 @@ module ServiceLayer
     def initialize(**properties)
       singleton_class.class_exec(properties.keys) do |fields|
         attr_accessor(*fields)
+        private(*(fields + fields.map { |field| :"#{field}=" }))
       end
 
       properties.each do |field, value|
