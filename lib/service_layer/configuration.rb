@@ -19,7 +19,7 @@ module ServiceLayer
 
     def initialize
       @default_exceptions = [StandardError]
-      @monad = :without
+      @monad = :dry
     end
   end
 

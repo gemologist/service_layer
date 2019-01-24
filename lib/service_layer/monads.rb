@@ -11,8 +11,7 @@ module ServiceLayer
   module Monads
     # The available list of monads dependency.
     FACTORIES = {
-      dry:     Factory::Dry.new,
-      without: Factory::ServiceLayerResult.new
+      dry:     Factory::Dry.new
     }.freeze
 
     private_constant :FACTORIES
