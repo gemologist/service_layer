@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'dry/monads/try'
+
 module ServiceLayer
   # The +Command+ contains the logic related to the command pattern. This
   # pattern is one of the bases of the service layer. It provides the logic
@@ -109,6 +111,10 @@ module ServiceLayer
       Monads.create_failure(exception)
     end
 
+    def execute_monads
+      Try(*exceptions, &method(:perform))
+    end
+
     # @abstract must implement perform method when include command pattern.
     # @return [Hash]
     def perform
@@ -121,6 +127,9 @@ module ServiceLayer
       else
         self.class.exceptions
       end
+    end
+
+    def rollback
     end
   end
 end

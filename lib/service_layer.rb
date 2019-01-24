@@ -12,6 +12,7 @@ module ServiceLayer
   autoload :Command, 'service_layer/command'
   autoload :Contract, 'service_layer/contract'
   autoload :Monads, 'service_layer/monads'
+  autoload :Pipeline, 'service_layer/pipeline'
 
   # Configures +ServiceLayer+ settings.
   #

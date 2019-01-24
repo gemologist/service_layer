@@ -12,6 +12,11 @@ module ServiceLayer
     # @return [Array<Class>] a list of +Exception+.
     attr_accessor :default_exceptions
 
+    # Defines the DSL generator.
+    #
+    # @return [#each] a method-caller pair DSL.
+    attr_accessor :filter
+
     # Defines the monad adapter.
     #
     # @return [Symbol]
@@ -19,6 +24,7 @@ module ServiceLayer
 
     def initialize
       @default_exceptions = [StandardError]
+      @filter = Pipeline::Filter
       @monad = :dry
     end
   end
