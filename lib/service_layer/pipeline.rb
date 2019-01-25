@@ -14,20 +14,40 @@ module ServiceLayer
 
         define_singleton_method(:filters) { @filters ||= [] }
 
-        ServiceLayer.configuration.filter.each do |key, caller|
-          define_singleton_method(key) do |klass, **options|
-            filters << { caller: caller, klass: klass, options: options }
+        ServiceLayer.configuration.filter.each do |method, filter|
+          define_singleton_method(method) do |klass, **options|
+            filters << { filter: filter, klass: klass, options: options }
           end
         end
       end
     end
 
-    def initialize(filters: self.class.filters)
-      @pipe = Pipe.new(filters)
+    def perform
+      properties = {}
+
+      self.class.properties.each_key do |field|
+        properties[field] = __send__(field)
+      end
+
+      monad = Monads.create_success(**properties)
+
+      self.class.filters.each_with_index do |filter, index|
+        properties = monad.value!
+        monad = filter[:filter].call(properties, klass: filter[:klass], **filter[:options])
+
+        if monad.failure?
+          rollback(self.class.filters[0...index])
+          break
+        end
+      end
+
+      monad
     end
 
-    def call(input)
-      @pipe.call(Success(input))
+    def rollback(filters: self.class.filters)
+      filters.reverse.each do |filter:, klass:, options:|
+        filter.rollback(properties, klass: klass, **options)
+      end
     end
   end
 end
