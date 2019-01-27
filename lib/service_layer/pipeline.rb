@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'dry/monads/result'
-require 'service_layer/pipeline/pipe'
 
 module ServiceLayer
   # The +Pipeline+

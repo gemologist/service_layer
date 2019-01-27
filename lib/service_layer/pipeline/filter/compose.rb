@@ -13,7 +13,7 @@ module ServiceLayer
           klass.perform(input)
         end
 
-        def rollback(input, klass: **args, &block)
+        def rollback(input, klass:, **args, &block)
           klass.new.rollback(input)
         end
       end
