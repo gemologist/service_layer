@@ -240,3 +240,6 @@ RSpec/VerifiedDoubles:
 
 RSpec/VoidExpect:
   Enabled: true
+
+RSpec/Yield:
+  Enabled: true
