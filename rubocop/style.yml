@@ -319,8 +319,10 @@ Style/MultilineTernaryOperator:
 Style/MultipleComparison:
   Enabled: true
 
+# Override
 Style/MutableConstant:
   Enabled: true
+  EnforcedStyle: strict
 
 Style/NegatedIf:
   Enabled: true
