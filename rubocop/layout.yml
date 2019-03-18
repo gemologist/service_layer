@@ -146,6 +146,7 @@ Layout/EndOfLine:
 Layout/ExtraSpacing:
   Enabled: true
   AllowForAlignment: true
+  AllowBeforeTrailingComments: false
   ForceEqualSignAlignment: false
 
 Layout/FirstArrayElementLineBreak:

@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.3.7'
 
   spec.add_development_dependency 'rspec', '~> 3.6'
-  spec.add_development_dependency 'rubocop', '~> 0.65.0'
+  spec.add_development_dependency 'rubocop', '~> 0.66.0'
   spec.add_development_dependency 'rubocop-rspec', '~> 1.32'
   spec.add_development_dependency 'yard', '~> 0.9.9'
   spec.add_development_dependency 'yard-classmethods', '~> 1.0'

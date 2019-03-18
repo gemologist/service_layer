@@ -100,6 +100,10 @@ Style/ConditionalAssignment:
   SingleLineConditionsOnly: true
   IncludeTernaryExpressions: true
 
+# Override
+Style/ConstantVisibility:
+  Enabled: true
+
 Style/Copyright:
   Enabled: false
 
