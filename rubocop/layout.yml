@@ -211,6 +211,9 @@ Layout/MultilineArrayBraceLayout:
   Enabled: true
   EnforcedStyle: symmetrical
 
+Layout/MultilineArrayLineBreaks:
+  Enabled: false
+
 # Override
 Layout/MultilineAssignmentLayout:
   Enabled: true
@@ -223,6 +226,13 @@ Layout/MultilineBlockLayout:
 Layout/MultilineHashBraceLayout:
   Enabled: true
   EnforcedStyle: new_line
+
+# Override
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: false
 
 Layout/MultilineMethodCallBraceLayout:
   Enabled: true

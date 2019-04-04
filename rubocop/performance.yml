@@ -44,9 +44,6 @@ Performance/FlatMap:
 Performance/InefficientHashSearch:
   Enabled: true
 
-Performance/LstripRstrip:
-  Enabled: true
-
 # Override
 Performance/OpenStruct:
   Enabled: true
@@ -67,16 +64,10 @@ Performance/RedundantMerge:
   Enabled: true
   MaxKeyValuePairs: 1
 
-Performance/RedundantSortBy:
-  Enabled: true
-
 Performance/RegexpMatch:
   Enabled: true
 
 Performance/ReverseEach:
-  Enabled: true
-
-Performance/Sample:
   Enabled: true
 
 Performance/Size:
@@ -97,9 +88,6 @@ Performance/TimesMap:
 # Override
 Performance/UnfreezeString:
   Enabled: false
-
-Performance/UnneededSort:
-  Enabled: true
 
 Performance/UriDefaultParser:
   Enabled: true

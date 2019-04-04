@@ -467,6 +467,9 @@ Style/RedundantReturn:
 Style/RedundantSelf:
   Enabled: true
 
+Style/RedundantSortBy:
+  Enabled: true
+
 # Override
 Style/RegexpLiteral:
   Enabled: false
@@ -494,6 +497,9 @@ Style/SafeNavigation:
     - presence
     - try
     - try!
+
+Style/Sample:
+  Enabled: true
 
 Style/SelfAssignment:
   Enabled: true
@@ -545,6 +551,9 @@ Style/StringMethods:
   Enabled: true
   PreferredMethods:
     intern: to_sym
+
+Style/Strip:
+  Enabled: true
 
 Style/StructInheritance:
   Enabled: true
@@ -636,6 +645,9 @@ Style/UnneededInterpolation:
   Enabled: true
 
 Style/UnneededPercentQ:
+  Enabled: true
+
+Style/UnneededSort:
   Enabled: true
 
 Style/UnpackFirst:

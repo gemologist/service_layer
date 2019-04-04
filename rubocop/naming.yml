@@ -116,6 +116,11 @@ Naming/PredicateName:
     - 'spec/**/*'
 
 # Override
+Naming/RescuedExceptionsVariableName:
+  Enabled: true
+  PreferredName: exception
+
+# Override
 Naming/UncommunicativeBlockParamName:
   Enabled: true
   MinNameLength: 3
