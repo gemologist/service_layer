@@ -81,6 +81,10 @@ Lint/FormatParameterMismatch:
 Lint/HandleExceptions:
   Enabled: true
 
+# Override
+Lint/HeredocMethodCallPosition:
+  Enabled: true
+
 Lint/ImplicitStringConcatenation:
   Enabled: true
 
@@ -199,6 +203,7 @@ Lint/ToJSON:
 
 Lint/UnderscorePrefixedVariableName:
   Enabled: true
+  AllowKeywordBlockArguments: false
 
 Lint/UnifiedInteger:
   Enabled: true

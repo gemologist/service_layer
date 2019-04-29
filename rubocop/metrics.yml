@@ -35,6 +35,7 @@ Metrics/CyclomaticComplexity:
 
 Metrics/LineLength:
   Enabled: true
+  AutoCorrect: false
   Max: 80
   AllowHeredoc: true
   AllowURI: true

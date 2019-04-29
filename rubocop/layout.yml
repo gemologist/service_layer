@@ -3,6 +3,11 @@
 Layout/AccessModifierIndentation:
   Enabled: false
 
+Layout/AlignArguments:
+  Enabled: true
+  EnforcedStyle: with_first_argument
+  IndentationWidth: ~
+
 Layout/AlignArray:
   Enabled: true
 
@@ -13,10 +18,10 @@ Layout/AlignHash:
   EnforcedColonStyle: table
   EnforcedLastArgumentHashStyle: always_inspect
 
+# Override
+# Depend on Style/MultilineMethodSignature
 Layout/AlignParameters:
-  Enabled: true
-  EnforcedStyle: with_first_parameter
-  IndentationWidth: ~
+  Enabled: false
 
 # Override
 Layout/BlockAlignment:
@@ -164,16 +169,8 @@ Layout/FirstMethodParameterLineBreak:
   Enabled: false
 
 # Override
-Layout/FirstParameterIndentation:
+Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
-  EnforcedStyle: special_for_inner_method_call
-  IndentationWidth: ~
-
-# Override
-Layout/IndentArray:
-  Enabled: true
-  EnforcedStyle: consistent
-  IndentationWidth: ~
 
 # Override
 # Depend on Layout/MultilineAssignmentLayout
@@ -181,10 +178,27 @@ Layout/IndentAssignment:
   Enabled: false
 
 # Override
-Layout/IndentHash:
+Layout/IndentFirstArgument:
+  Enabled: true
+  EnforcedStyle: special_for_inner_method_call
+  IndentationWidth: ~
+
+# Override
+Layout/IndentFirstArrayElement:
   Enabled: true
   EnforcedStyle: consistent
   IndentationWidth: ~
+
+# Override
+Layout/IndentFirstHashElement:
+  Enabled: true
+  EnforcedStyle: consistent
+  IndentationWidth: ~
+
+# Override
+# Depend on Style/MultilineMethodSignature
+Layout/IndentFirstParameter:
+  Enabled: false
 
 Layout/IndentHeredoc:
   Enabled: true
