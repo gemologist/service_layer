@@ -202,7 +202,7 @@ Layout/IndentFirstParameter:
 
 Layout/IndentHeredoc:
   Enabled: true
-  EnforcedStyle: auto_detection
+  EnforcedStyle: squiggly
 
 # Override
 Layout/IndentationConsistency:
