@@ -44,6 +44,13 @@ RSpec/DescribedClass:
   Enabled: true
   EnforcedStyle: described_class
 
+RSpec/Dialect:
+  Enabled: true
+  PreferredMethods:
+    example_group: describe
+    example: it
+    specify: it
+
 RSpec/EmptyExampleGroup:
   Enabled: true
   CustomIncludeMethods: []
