@@ -80,6 +80,7 @@ Lint/FormatParameterMismatch:
 
 Lint/HandleExceptions:
   Enabled: true
+  AllowComments: false
 
 # Override
 Lint/HeredocMethodCallPosition:
