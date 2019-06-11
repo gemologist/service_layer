@@ -66,5 +66,6 @@ Metrics/ParameterLists:
 
 # Override
 # Depend on Metrics/CyclomaticComplexity
+# Depend on Style/ProceduralConditionStatement
 Metrics/PerceivedComplexity:
   Enabled: false

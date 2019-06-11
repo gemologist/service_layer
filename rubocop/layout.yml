@@ -31,11 +31,10 @@ Layout/BlockAlignment:
 Layout/BlockEndNewline:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Layout/CaseIndentation:
-  Enabled: true
-  EnforcedStyle: case
-  IndentOneStep: false
-  IndentationWidth: ~
+  Enabled: false
 
 # Override
 Layout/ClassStructure:
@@ -69,8 +68,11 @@ Layout/ClosingParenthesisIndentation:
 Layout/CommentIndentation:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
+# Depend on Style/ProceduralLoopStatement
 Layout/ConditionPosition:
-  Enabled: true
+  Enabled: false
 
 # Override
 Layout/DefEndAlignment:
@@ -93,6 +95,7 @@ Layout/EmptyComment:
   AllowMarginComment: true
 
 # Override
+# Depend on Style/ProceduralConditionStatement
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 

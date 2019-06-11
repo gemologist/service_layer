@@ -2,6 +2,7 @@
 Performance/Caller:
   Enabled: false
 
+# Depend on Style/ProceduralConditionStatement
 Performance/CaseWhenSplat:
   Enabled: false
 
