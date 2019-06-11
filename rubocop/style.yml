@@ -94,11 +94,10 @@ Style/CommentAnnotation:
 Style/CommentedKeyword:
   Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/ConditionalAssignment:
-  Enabled: true
-  EnforcedStyle: assign_to_condition
-  SingleLineConditionsOnly: true
-  IncludeTernaryExpressions: true
+  Enabled: false
 
 # Override
 Style/ConstantVisibility:
@@ -143,8 +142,10 @@ Style/EachWithObject:
 Style/EmptyBlockParameter:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/EmptyCaseCondition:
-  Enabled: true
+  Enabled: false
 
 Style/EmptyElse:
   Enabled: true
@@ -193,9 +194,10 @@ Style/GlobalVars:
   Enabled: true
   AllowedVariables: []
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/GuardClause:
-  Enabled: true
-  MinBodyLength: 1
+  Enabled: false
 
 Style/HashSyntax:
   Enabled: true
@@ -203,28 +205,40 @@ Style/HashSyntax:
   UseHashRocketsWithSymbolValues: false
   PreferHashRocketsForNonAlnumEndingSymbols: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/IdenticalConditionalBranches:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/IfInsideElse:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/IfUnlessModifier:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/IfUnlessModifierOfIfUnless:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/IfWithSemicolon:
-  Enabled: true
+  Enabled: false
 
 # Override
 # Correlate with Style/RedundantException
 Style/ImplicitRuntimeError:
   Enabled: true
 
+# Override
+# Todo ForbidProceduralLoopStatement
 Style/InfiniteLoop:
-  Enabled: true
+  Enabled: false
 
 # Override
 Style/InlineComment:
@@ -280,10 +294,9 @@ Style/MethodMissingSuper:
 Style/MinMax:
   Enabled: true
 
-# Override
+# Depend on Style/ProceduralConditionStatement
 Style/MissingElse:
-  Enabled: true
-  EnforcedStyle: case
+  Enabled: false
 
 Style/MissingRespondToMissing:
   Enabled: true
@@ -303,11 +316,15 @@ Style/ModuleFunction:
 Style/MultilineBlockChain:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/MultilineIfModifier:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/MultilineIfThen:
-  Enabled: true
+  Enabled: false
 
 Style/MultilineMemoization:
   Enabled: true
@@ -317,8 +334,10 @@ Style/MultilineMemoization:
 Style/MultilineMethodSignature:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/MultilineTernaryOperator:
-  Enabled: true
+  Enabled: false
 
 Style/MultipleComparison:
   Enabled: true
@@ -328,31 +347,39 @@ Style/MutableConstant:
   Enabled: true
   EnforcedStyle: strict
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/NegatedIf:
-  Enabled: true
-  EnforcedStyle: both
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/NegatedUnless:
-  Enabled: true
-  EnforcedStyle: both
+  Enabled: false
 
+# Override
+# Todo ForbidProceduralLoopStatement
 Style/NegatedWhile:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/NestedModifier:
-  Enabled: true
+  Enabled: false
 
 # Override
 Style/NestedParenthesizedCalls:
   Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/NestedTernaryOperator:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/Next:
-  Enabled: true
-  EnforcedStyle: skip_modifier_ifs
-  MinBodyLength: 3
+  Enabled: false
 
 Style/NilComparison:
   Enabled: true
@@ -384,8 +411,10 @@ Style/NumericPredicate:
   IgnoredMethods: []
   Exclude: []
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/OneLineConditional:
-  Enabled: true
+  Enabled: false
 
 # Override
 Style/OptionHash:
@@ -406,10 +435,11 @@ Style/OrAssignment:
 Style/ParallelAssignment:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
+# Todo ForbidProceduralLoopStatement
 Style/ParenthesesAroundCondition:
-  Enabled: true
-  AllowSafeAssignment: true
-  AllowInMultilineConditions: false
+  Enabled: false
 
 Style/PercentLiteralDelimiters:
   Enabled: true
@@ -449,8 +479,10 @@ Style/RandomWithOffset:
 Style/RedundantBegin:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/RedundantConditional:
-  Enabled: true
+  Enabled: false
 
 # Override
 # Correlate with Style/ImplicitRuntimeError
@@ -487,9 +519,9 @@ Style/RescueStandardError:
   EnforcedStyle: explicit
 
 # Override
+# Depend on Style/ProceduralConditionStatement
 Style/ReturnNil:
-  Enabled: true
-  EnforcedStyle: return
+  Enabled: false
 
 # Override
 Style/SafeNavigation:
@@ -578,10 +610,9 @@ Style/SymbolProc:
     - define_method
 
 # Override
+# Depend on Style/ProceduralConditionStatement
 Style/TernaryParentheses:
-  Enabled: true
-  EnforcedStyle: require_no_parentheses
-  AllowSafeAssignment: false
+  Enabled: false
 
 Style/TrailingBodyOnClass:
   Enabled: true
@@ -636,14 +667,18 @@ Style/TrivialAccessors:
     - to_s
     - to_sym
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/UnlessElse:
-  Enabled: true
+  Enabled: false
 
 Style/UnneededCapitalW:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/UnneededCondition:
-  Enabled: true
+  Enabled: false
 
 Style/UnneededInterpolation:
   Enabled: true
@@ -660,14 +695,20 @@ Style/UnpackFirst:
 Style/VariableInterpolation:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Style/WhenThen:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Todo ForbidProceduralLoopStatement
 Style/WhileUntilDo:
-  Enabled: true
+  Enabled: false
 
+# Override
+# Todo ForbidProceduralLoopStatement
 Style/WhileUntilModifier:
-  Enabled: true
+  Enabled: false
 
 # Override
 Style/WordArray:
