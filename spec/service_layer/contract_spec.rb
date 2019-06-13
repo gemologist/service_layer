@@ -43,7 +43,9 @@ RSpec.describe ServiceLayer::Contract do
       context 'with default block value' do
         subject { described_module.new }
 
-        before { described_module.property email: -> { 'adriensldy@gmail.com' } }
+        before do
+          described_module.property email: -> { 'adriensldy@gmail.com' }
+        end
 
         it 'fallbacks to the output of the default defined block' do
           is_expected.to have_fields(properties)

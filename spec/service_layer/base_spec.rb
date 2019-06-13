@@ -32,6 +32,7 @@ RSpec.describe ServiceLayer::Base do
 
     context 'when an exception raises' do
       before { allow(service).to receive(:perform).and_raise TypeError.new }
+
       after { described_class.exceptions.clear }
 
       it 'returns a failure Result' do
