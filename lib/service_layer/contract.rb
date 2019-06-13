@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'service_layer/result'
+require 'service_layer/contract/value'
 
 module ServiceLayer
   # The +Contract+ makes it possible to structure an object.
@@ -98,21 +99,8 @@ module ServiceLayer
     # @raise [ArgumentError] when a required property is missing.
     def initialize(**attributes)
       self.class.properties.each do |property, default_value|
-        default = default_value_to_proc default_value
+        default = Value.new(default_value).to_proc
         __send__ "#{property}=", attributes.fetch(property, &default)
-      end
-    end
-
-    private def default_value_to_proc(default_value)
-      if default_value.respond_to?(:to_proc)
-        default_value = default_value.to_proc
-        if default_value.arity.zero?
-          Proc.new { default_value.call }
-        else
-          default_value
-        end
-      else
-        Proc.new { default_value }
       end
     end
 
