@@ -121,11 +121,8 @@ module ServiceLayer
     end
 
     private def exceptions
-      if self.class.exceptions.empty?
-        ServiceLayer.configuration.default_exceptions
-      else
-        self.class.exceptions
-      end
+      { [] => ServiceLayer.configuration.default_exceptions }
+        .fetch(self.class.exceptions) { |exceptions| exceptions }
     end
   end
 end
