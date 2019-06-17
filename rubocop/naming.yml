@@ -14,6 +14,7 @@ Naming/ConstantName:
   Enabled: true
 
 # Override
+# Specific to gems
 Naming/FileName:
   Enabled: true
   Exclude: [spec/**/*]
