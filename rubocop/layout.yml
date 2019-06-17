@@ -37,6 +37,7 @@ Layout/CaseIndentation:
   Enabled: false
 
 # Override
+# Todo Improve indepedent module inclusion
 Layout/ClassStructure:
   Enabled: true
   Categories:
@@ -172,6 +173,7 @@ Layout/FirstMethodParameterLineBreak:
   Enabled: false
 
 # Override
+# Todo Move to Style
 Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
 
@@ -208,6 +210,7 @@ Layout/IndentHeredoc:
   EnforcedStyle: squiggly
 
 # Override
+# Todo Improve Useless Cop just usefull with rails style
 Layout/IndentationConsistency:
   Enabled: false
 
@@ -255,6 +258,7 @@ Layout/MultilineMethodCallBraceLayout:
   Enabled: true
   EnforcedStyle: symmetrical
 
+# Todo MultiStyle
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: aligned
@@ -286,6 +290,8 @@ Layout/SpaceAfterMethodName:
 Layout/SpaceAfterNot:
   Enabled: true
 
+# Useless
+# Link to Style/Semicolon
 Layout/SpaceAfterSemicolon:
   Enabled: true
 
@@ -321,6 +327,8 @@ Layout/SpaceBeforeFirstArg:
   Enabled: true
   AllowForAlignment: true
 
+# Useless
+# Link to Style/Semicolon
 Layout/SpaceBeforeSemicolon:
   Enabled: true
 
