@@ -23,6 +23,7 @@ Metrics/BlockNesting:
     - 'spec/**/*'
 
 # Override
+# Specific to gems
 Metrics/ClassLength:
   Enabled: true
   CountComments: false
@@ -53,6 +54,7 @@ Metrics/MethodLength:
   ExcludedMethods: []
 
 # Override
+# Specific to gems
 Metrics/ModuleLength:
   Enabled: true
   CountComments: false
