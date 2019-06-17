@@ -9,9 +9,11 @@ Lint/AmbiguousOperator:
 Lint/AmbiguousRegexpLiteral:
   Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
+# Depend on Style/ProceduralLoopStatement
 Lint/AssignmentInCondition:
-  Enabled: true
-  AllowSafeAssignment: true
+  Enabled: false
 
 Lint/BigDecimalNew:
   Enabled: true
@@ -31,8 +33,10 @@ Lint/DeprecatedClassMethods:
 Lint/DisjunctiveAssignmentInConstructor:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Lint/DuplicateCaseCondition:
-  Enabled: true
+  Enabled: false
 
 Lint/DuplicateMethods:
   Enabled: true
@@ -57,8 +61,10 @@ Lint/EmptyExpression:
 Lint/EmptyInterpolation:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Lint/EmptyWhen:
-  Enabled: true
+  Enabled: false
 
 Lint/EndInMethod:
   Enabled: true
@@ -100,14 +106,19 @@ Lint/InheritException:
 Lint/InterpolationCheck:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
+# Depend on Style/ProceduralLoopStatement
 Lint/LiteralAsCondition:
-  Enabled: true
+  Enabled: false
 
 Lint/LiteralInInterpolation:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralLoopStatement
 Lint/Loop:
-  Enabled: true
+  Enabled: false
 
 Lint/MissingCopEnableDirective:
   Enabled: true
@@ -122,8 +133,10 @@ Lint/NestedMethodDefinition:
 Lint/NestedPercentLiteral:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Lint/NextWithoutAccumulator:
-  Enabled: true
+  Enabled: false
 
 Lint/NonLocalExitFromIterator:
   Enabled: true
@@ -153,8 +166,10 @@ Lint/RedundantWithIndex:
 Lint/RedundantWithObject:
   Enabled: true
 
+# Override
+# Depend on Style/ProceduralConditionStatement
 Lint/RegexpAsCondition:
-  Enabled: true
+  Enabled: false
 
 Lint/RequireParentheses:
   Enabled: true
