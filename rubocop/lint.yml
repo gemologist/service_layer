@@ -184,6 +184,7 @@ Lint/ReturnInVoidContext:
   Enabled: true
 
 # Override
+# Todo Remove rails methods default
 Lint/SafeNavigationChain:
   Enabled: true
   Whitelist: []
@@ -239,9 +240,11 @@ Lint/UnneededSplatExpansion:
 Lint/UnreachableCode:
   Enabled: true
 
+# Override
+# Todo Forbid empty blocks
 Lint/UnusedBlockArgument:
   Enabled: true
-  IgnoreEmptyBlocks: true
+  IgnoreEmptyBlocks: false
   AllowUnusedKeywordArguments: false
 
 Lint/UnusedMethodArgument:
@@ -255,9 +258,12 @@ Lint/UriEscapeUnescape:
 Lint/UriRegexp:
   Enabled: true
 
-# Override
+# Todo Improve Check iniline AccessModifier
+# Useless for moment
 Lint/UselessAccessModifier:
-  Enabled: false
+  Enabled: true
+  ContextCreatingMethods: []
+  MethodCreatingMethods: []
 
 Lint/UselessAssignment:
   Enabled: true
