@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require 'service_layer/contract/values/atomic'
-require 'service_layer/contract/values/closure'
+require 'service_layer/contract/values'
 
 module ServiceLayer
   module Contract

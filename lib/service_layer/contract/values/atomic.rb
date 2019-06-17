@@ -12,8 +12,6 @@ module ServiceLayer
           Proc.new { @value }
         end
       end
-
-      private_constant :Atomic
     end
   end
 end

@@ -12,8 +12,6 @@ module ServiceLayer
           [Proc.new { @value.call }].fetch(@value.arity, @value)
         end
       end
-
-      private_constant :Closure
     end
   end
 end
