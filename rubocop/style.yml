@@ -21,8 +21,9 @@ Style/AsciiComments:
 Style/Attr:
   Enabled: true
 
+# Override
 Style/AutoResourceCleanup:
-  Enabled: false
+  Enabled: true
 
 # Override
 Style/BarePercentLiterals:
@@ -58,6 +59,7 @@ Style/ClassAndModuleChildren:
   AutoCorrect: true
 
 # Override
+# Todo Add Cop ForbidTypingCheck
 Style/ClassCheck:
   Enabled: false
 
@@ -82,6 +84,7 @@ Style/ColonMethodCall:
 Style/ColonMethodDefinition:
   Enabled: true
 
+# TODO
 Style/CommandLiteral:
   Enabled: true
 
@@ -100,6 +103,7 @@ Style/ConditionalAssignment:
   Enabled: false
 
 # Override
+# TODO
 Style/ConstantVisibility:
   Enabled: true
 
@@ -180,11 +184,14 @@ Style/For:
   Enabled: true
   EnforcedStyle: each
 
+# TODO
 Style/FormatString:
   Enabled: false
 
+# TODO
 Style/FormatStringToken:
-  Enabled: false
+  Enabled: true
+  EnforcedStyle: annotated
 
 Style/FrozenStringLiteralComment:
   Enabled: true
@@ -199,6 +206,7 @@ Style/GlobalVars:
 Style/GuardClause:
   Enabled: false
 
+# TODO alignHashmixedkey
 Style/HashSyntax:
   Enabled: true
   EnforcedStyle: ruby19
@@ -257,6 +265,7 @@ Style/InverseMethods:
     :select: :reject
     :select!: :reject!
 
+# Useful for applications
 Style/IpAddresses:
   Enabled: false
 
@@ -269,9 +278,12 @@ Style/LambdaCall:
   Enabled: true
   EnforcedStyle: call
 
+# TODO
+# String concatenation and multiline
 Style/LineEndConcatenation:
   Enabled: true
 
+# TODO
 Style/MethodCallWithArgsParentheses:
   Enabled: false
 
@@ -309,6 +321,7 @@ Style/MixinUsage:
   Enabled: true
 
 # Override
+# Todo ForceLinear usage
 Style/ModuleFunction:
   Enabled: false
 
@@ -465,6 +478,7 @@ Style/PreferredHashMethods:
   EnforcedStyle: short
 
 # Override
+# Todo Configurable
 Style/Proc:
   Enabled: false
 
@@ -486,6 +500,7 @@ Style/RedundantConditional:
 
 # Override
 # Correlate with Style/ImplicitRuntimeError
+# Todo Unify two cops
 Style/RedundantException:
   Enabled: false
 
@@ -514,6 +529,7 @@ Style/RegexpLiteral:
 Style/RescueModifier:
   Enabled: true
 
+# Todo Add offense on modifier form
 Style/RescueStandardError:
   Enabled: true
   EnforcedStyle: explicit
@@ -524,15 +540,11 @@ Style/ReturnNil:
   Enabled: false
 
 # Override
+# Todo Remove rails config
 Style/SafeNavigation:
   Enabled: true
   ConvertCodeThatCanStartToReturnNil: true
-  Whitelist:
-    - present?
-    - blank?
-    - presence
-    - try
-    - try!
+  Whitelist: []
 
 Style/Sample:
   Enabled: true
@@ -642,6 +654,7 @@ Style/TrailingUnderscoreVariable:
   Enabled: true
   AllowNamedUnderscoreVariables: true
 
+# TODO check complexity
 Style/TrivialAccessors:
   Enabled: true
   ExactNameMatch: true
