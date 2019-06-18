@@ -120,6 +120,7 @@ Lint/LiteralInInterpolation:
 Lint/Loop:
   Enabled: false
 
+# Useless
 Lint/MissingCopEnableDirective:
   Enabled: true
   MaximumRangeSize: .inf

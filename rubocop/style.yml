@@ -525,9 +525,10 @@ Style/RedundantSortBy:
 Style/RegexpLiteral:
   Enabled: false
 
-# Relate to Style/RescueStandardError
+# Override
+# Depend on Style/RescueStandardError
 Style/RescueModifier:
-  Enabled: true
+  Enabled: false
 
 # Todo Add offense on modifier form
 Style/RescueStandardError:
