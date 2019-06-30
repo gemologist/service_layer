@@ -180,6 +180,10 @@ Style/EvenOdd:
 Style/ExpandPathArguments:
   Enabled: true
 
+Style/FloatDivision:
+  Enabled: true
+  EnforcedStyle: single_coerce
+
 Style/For:
   Enabled: true
   EnforcedStyle: each
