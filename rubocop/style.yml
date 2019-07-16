@@ -356,6 +356,11 @@ Style/MultilineMethodSignature:
 Style/MultilineTernaryOperator:
   Enabled: false
 
+# Override
+# Depend on Style/ProceduralConditionStatement
+Style/MultilineWhenThen:
+  Enabled: false
+
 Style/MultipleComparison:
   Enabled: true
 

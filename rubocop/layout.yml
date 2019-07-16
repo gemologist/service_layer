@@ -226,6 +226,7 @@ Layout/LeadingBlankLines:
 
 Layout/LeadingCommentSpace:
   Enabled: true
+  AllowDoxygenCommentStyle: false
 
 Layout/MultilineArrayBraceLayout:
   Enabled: true
