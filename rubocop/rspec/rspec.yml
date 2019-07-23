@@ -146,6 +146,9 @@ RSpec/IteratedExpectation:
 RSpec/LeadingSubject:
   Enabled: true
 
+RSpec/LeakyConstantDeclaration:
+  Enabled: true
+
 RSpec/LetBeforeExamples:
   Enabled: true
 
@@ -173,7 +176,6 @@ RSpec/MultipleDescribes:
 RSpec/MultipleExpectations:
   Enabled: true
   Max: 1
-  AggregateFailuresByDefault: false
 
 RSpec/MultipleSubjects:
   Enabled: true
