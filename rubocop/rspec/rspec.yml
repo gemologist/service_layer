@@ -118,6 +118,9 @@ RSpec/HookArgument:
 RSpec/HooksBeforeExamples:
   Enabled: true
 
+RSpec/ImplicitBlockExpectation:
+  Enabled: true
+
 RSpec/ImplicitExpect:
   Enabled: true
   EnforcedStyle: is_expected
