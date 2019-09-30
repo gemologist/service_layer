@@ -79,6 +79,7 @@ Naming/MemoizedInstanceVariableName:
 Naming/MethodName:
   Enabled: true
   EnforcedStyle: snake_case
+  IgnoredPatterns: []
 
 # Override
 Naming/PredicateName:
