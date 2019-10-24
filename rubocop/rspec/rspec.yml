@@ -23,6 +23,9 @@ RSpec/BeforeAfterAll:
     - spec/rails_helper.rb
     - spec/support/**/*.rb
 
+RSpec/ContextMethod:
+  Enabled: true
+
 RSpec/ContextWording:
   Enabled: true
   Prefixes:
@@ -54,6 +57,11 @@ RSpec/Dialect:
 RSpec/EmptyExampleGroup:
   Enabled: true
   CustomIncludeMethods: []
+
+# Override
+RSpec/EmptyLineAfterExample:
+  Enabled: true
+  AllowConsecutiveOneLiners: false
 
 RSpec/EmptyLineAfterExampleGroup:
   Enabled: true
