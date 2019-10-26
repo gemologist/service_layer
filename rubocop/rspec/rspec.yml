@@ -113,7 +113,7 @@ RSpec/ExpectOutput:
 # Override
 RSpec/FilePath:
   Enabled: true
-  CustomTransform: []
+  CustomTransform: {}
   IgnoreMethods: false
 
 RSpec/Focus:

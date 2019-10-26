@@ -20,11 +20,11 @@ Performance/CompareWithBlock:
 
 Performance/Count:
   Enabled: true
-  SafeMode: true
+#  SafeMode: true
 
 Performance/Detect:
   Enabled: true
-  SafeMode: true
+#  SafeMode: true
 
 Performance/DoubleStartEndWith:
   Enabled: true
