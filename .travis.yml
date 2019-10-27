@@ -1,15 +1,31 @@
 sudo: false
 language: ruby
+os: linux
 rvm:
   - 2.4.6
   - 2.5.5
   - 2.6.3
   - ruby-head
 install: gem install -g
-script:
-  - rubocop
-  - rspec
-matrix:
-  fast_finish: true
+script: rspec
+jobs:
+  include:
+    - stage: linter
+      script: rubocop
+    - stage: deploy
+      install: skip
+      script: skip
+      deploy:
+        provider: rubygems
+#        gem: service_layer
+        api_key: $RUBYGEMS_API_KEY
+#        on:
+#          tags: true
   allow_failures:
     - rvm: ruby-head
+  fast_finish: true
+stages:
+  - linter
+  - test
+  - name: deploy
+    if: tag =~ ^v
